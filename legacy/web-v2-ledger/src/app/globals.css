@@ -1,0 +1,170 @@
+@import "tailwindcss";
+
+/* Десктоп із мишею і без reduced-motion: тут вмикаються закріплення і горизонтальний скрол */
+@custom-variant desk (@media (min-width: 64rem) and (hover: hover) and (min-height: 40rem) and (prefers-reduced-motion: no-preference));
+
+/*
+ * Дизайн-система.
+ * Кольори: 1 основний (ink — глибокий зелено-чорний), 1 акцент (brass — латунь), нейтральні.
+ *   brass-deep — той самий акцент, затемнений для світлого фону (контраст 5.5:1 на paper).
+ *   danger — лише для помилок форми.
+ * Шрифти: одна пара — Literata (заголовки) + Onest (текст, цифри, підписи).
+ * Відступи: крок 8px (Tailwind: 2, 4, 6, 8, 10, 12, 16, 20…).
+ */
+@theme {
+  --color-ink: #0a1714;
+  --color-ink-2: #10221d;
+  --color-bone: #eceee6;
+  --color-bone-dim: rgb(236 238 230 / 0.72);  /* 8.5:1 на ink */
+  --color-line: rgb(236 238 230 / 0.14);      /* декоративні роздільники */
+  --color-line-strong: rgb(236 238 230 / 0.42); /* межі полів і кнопок, ≥3:1 */
+  --color-brass: #c9a45c;                      /* 7.8:1 на ink */
+  --color-brass-2: #dcbf86;                    /* hover */
+  --color-brass-deep: #7a5c24;                 /* акцент на світлому фоні, 5.5:1 */
+  --color-paper: #f3f1ea;
+  --color-paper-ink: #13201c;
+  --color-paper-dim: rgb(19 32 28 / 0.7);      /* 5.6:1 на paper */
+  --color-paper-line: rgb(19 32 28 / 0.14);
+  --color-danger: #e8977b;
+
+  --font-display: var(--font-literata), Georgia, serif;
+  --font-sans: var(--font-onest), system-ui, sans-serif;
+
+  --breakpoint-sm: 30rem;   /* 480 */
+  --breakpoint-3xl: 120rem; /* 1920 */
+
+  /* Ієрархія: H1 → H2 → H3 → lead → body (16–17px) → caption (13px) */
+  --text-display: clamp(2.5rem, 1.75rem + 3.2vw, 4.5rem);
+  --text-h2: clamp(2rem, 1.6rem + 1.8vw, 3.25rem);
+  --text-h3: clamp(1.25rem, 1.15rem + 0.4vw, 1.5rem);
+  --text-lead: clamp(1.0625rem, 1rem + 0.25vw, 1.25rem);
+  --text-caption: 0.8125rem;
+  --text-price: clamp(2rem, 1.7rem + 1.2vw, 2.75rem);
+
+  --radius-sm: 4px;
+  --ease-out-soft: cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+@utility container-x {
+  width: 100%;
+  max-width: 75rem;
+  margin-inline: auto;
+  padding-inline: clamp(1rem, 0.5rem + 2.5vw, 2.5rem);
+  @media (width >= 120rem) { max-width: 82rem; }
+}
+
+/* Відступ секцій: 80px на телефоні → 160px на великих екранах (кратно 8) */
+@utility section-y {
+  padding-block: clamp(5rem, 3.5rem + 5vw, 10rem);
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-padding-top: 5rem;
+  }
+  body {
+    background: var(--color-ink);
+    color: var(--color-bone);
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.6;
+    font-variant-numeric: lining-nums;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: clip;
+  }
+  @media (width >= 48rem) { body { font-size: 1.0625rem; } }
+  h1, h2, h3 { font-family: var(--font-display); font-weight: 500; letter-spacing: -0.02em; text-wrap: balance; }
+  h1 { font-size: var(--text-display); line-height: 1.05; font-weight: 400; }
+  h2 { font-size: var(--text-h2); line-height: 1.12; }
+  h3 { font-size: var(--text-h3); line-height: 1.3; }
+  h1 em, h2 em { font-style: italic; font-weight: 400; color: var(--color-brass); }
+  .on-paper h2 em { color: var(--color-brass-deep); }
+  p { text-wrap: pretty; }
+  :focus-visible { outline: 2px solid var(--color-brass); outline-offset: 3px; border-radius: var(--radius-sm); }
+  ::selection { background: var(--color-brass); color: var(--color-ink); }
+}
+
+@layer components {
+  /* Надзаголовок секції: короткий підпис + тонка лінія */
+  .eyebrow {
+    display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem;
+    font-size: var(--text-caption); font-weight: 500; line-height: 1.3; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--color-brass);
+  }
+  .eyebrow::before { content: ""; width: 2rem; height: 1px; background: currentColor; flex-shrink: 0; }
+
+  .caption { font-size: var(--text-caption); line-height: 1.4; letter-spacing: 0.04em; font-variant-numeric: tabular-nums; }
+
+  /* Кнопки: один стиль основної дії (primary) і один вторинний (secondary). Мікроанімації 200ms. */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+    min-height: 3rem; padding: 0 1.5rem; border-radius: var(--radius-sm); border: 1px solid transparent;
+    font-size: 1rem; font-weight: 500; line-height: 1.2; text-decoration: none; cursor: pointer; white-space: nowrap;
+    transition: background-color .2s var(--ease-out-soft), color .2s, border-color .2s, transform .15s;
+  }
+  @media (width >= 48rem) { .btn { min-height: 3.5rem; padding: 0 2rem; } }
+  .btn:active:not(:disabled) { transform: translateY(1px); }
+  .btn:disabled { opacity: 0.5; cursor: not-allowed; }
+  .btn-primary { background: var(--color-brass); color: var(--color-ink); }
+  .btn-secondary { border-color: var(--color-line-strong); color: var(--color-bone); }
+  .on-paper .btn-secondary { border-color: rgb(19 32 28 / 0.42); color: var(--color-paper-ink); }
+  @media (hover: hover) {
+    .btn-primary:hover:not(:disabled) { background: var(--color-brass-2); }
+    .btn-secondary:hover:not(:disabled) { border-color: var(--color-bone); }
+    .on-paper .btn-secondary:hover:not(:disabled) { border-color: var(--color-paper-ink); }
+  }
+
+  .faq-item summary { list-style: none; }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item[open] .faq-icon-v { transform: scaleY(0); }
+
+  /* Заглушка [ДАНІ…]: помітна, щоб не сплутати зі справжнім фактом */
+  .placeholder {
+    display: inline-block; padding: 0 0.35em; border: 1px dashed currentColor; border-radius: 2px;
+    font-size: 0.85em; letter-spacing: 0.02em; opacity: 0.85; white-space: normal;
+  }
+
+  /* Тихе текстове посилання (вторинна дія) */
+  .link-quiet {
+    display: inline-flex; align-items: center; min-height: 2.75rem;
+    color: var(--color-bone); text-decoration: underline; text-decoration-color: var(--color-line-strong);
+    text-underline-offset: 0.35em; transition: text-decoration-color .2s, color .2s;
+  }
+  @media (hover: hover) { .link-quiet:hover { text-decoration-color: var(--color-brass); color: var(--color-brass); } }
+
+  /* Поле форми як рядок бланка: лише нижня лінія */
+  .field-input.field-line { border-width: 0 0 1px; border-radius: 0; padding-inline: 0; }
+  .field-input.field-line:focus { box-shadow: 0 1px 0 0 var(--color-brass); }
+
+  .field-input {
+    width: 100%; min-height: 3rem; padding: 0 1rem; border-radius: var(--radius-sm); border: 1px solid var(--color-line-strong);
+    background: transparent; color: var(--color-bone); font-size: 1rem;
+    transition: border-color .2s, box-shadow .2s;
+  }
+  .field-input::placeholder { color: rgb(236 238 230 / 0.55); }
+  .field-input:hover { border-color: rgb(236 238 230 / 0.6); }
+  .field-input:focus { outline: none; border-color: var(--color-brass); box-shadow: 0 0 0 1px var(--color-brass); }
+  .field-input[aria-invalid="true"] { border-color: var(--color-danger); }
+}
+
+/* Lenis */
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+.lenis.lenis-stopped { overflow: clip; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
+
+/* Заголовки чекають на SplitText; якщо скрипт не спрацював — показуються через 2.5 с */
+.motion [data-split] { visibility: hidden; animation: split-fallback 0s 2.5s forwards; }
+@keyframes split-fallback { to { visibility: visible; } }
+
+/* Точка етапу співпраці, до якого дійшла прокрутка */
+[data-dot] { transition: background-color .25s; }
+[data-dot].is-on { background-color: var(--color-brass); }
+
+/* Поки скрипт не обрав режим — не показуємо SVG, щоб не було «стрибка» анімації */
+html:not([data-scene]) .scene-svg { visibility: hidden; }

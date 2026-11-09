@@ -1,0 +1,82 @@
+[111373407ms] [WARNING] Warning: <path> length cannot be measured when vector-effect is non-scaling-stroke and the element isn't proportionally scaled. @ http://localhost:3000/_next/static/chunks/3eh0ygekmo_-a.js:0
+[111373944ms] [WARNING] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead. @ http://localhost:3000/_next/static/chunks/2bw5_sxonru-u.js:0
+[111373991ms] [WARNING] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead. @ http://localhost:3000/_next/static/chunks/2bw5_sxonru-u.js:0
+[111383123ms] [WARNING] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead. @ http://localhost:3000/_next/static/chunks/2bw5_sxonru-u.js:0
+[111399709ms] [WARNING] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead. @ http://localhost:3000/_next/static/chunks/2bw5_sxonru-u.js:0
+[111459596ms] [WARNING] Warning: <path> length cannot be measured when vector-effect is non-scaling-stroke and the element isn't proportionally scaled. @ http://localhost:3000/_next/static/chunks/3eh0ygekmo_-a.js:0
+[111459707ms] [WARNING] Warning: <path> length cannot be measured when vector-effect is non-scaling-stroke and the element isn't proportionally scaled. @ http://localhost:3000/_next/static/chunks/1ja9pccr24o_x.js:0
+[111460112ms] [WARNING] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead. @ http://localhost:3000/_next/static/chunks/2bw5_sxonru-u.js:0
+[111460148ms] [WARNING] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead. @ http://localhost:3000/_next/static/chunks/2bw5_sxonru-u.js:0
+[111468203ms] [WARNING] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead. @ http://localhost:3000/_next/static/chunks/2bw5_sxonru-u.js:0
+[111478656ms] [WARNING] Warning: <path> length cannot be measured when vector-effect is non-scaling-stroke and the element isn't proportionally scaled. @ http://localhost:3000/_next/static/chunks/1ja9pccr24o_x.js:0
+[111479062ms] [WARNING] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead. @ http://localhost:3000/_next/static/chunks/2bw5_sxonru-u.js:0
+[111479096ms] [WARNING] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead. @ http://localhost:3000/_next/static/chunks/2bw5_sxonru-u.js:0
+[111529477ms] [WARNING] Warning: <path> length cannot be measured when vector-effect is non-scaling-stroke and the element isn't proportionally scaled. @ http://localhost:3000/_next/static/chunks/1ja9pccr24o_x.js:0
+[111529876ms] [WARNING] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead. @ http://localhost:3000/_next/static/chunks/2bw5_sxonru-u.js:0
+[111529909ms] [WARNING] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead. @ http://localhost:3000/_next/static/chunks/2bw5_sxonru-u.js:0
+[111535456ms] [WARNING] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead. @ http://localhost:3000/_next/static/chunks/2bw5_sxonru-u.js:0
+[111577269ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/_next/static/chunks/0rdn6c3yqvdyf.js:0
+[111577269ms] [ERROR] Refused to execute script from 'http://localhost:3000/_next/static/chunks/0rdn6c3yqvdyf.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled. @ http://localhost:3000/?x=1794215442819:0
+[111577273ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/_next/static/chunks/2v0t000-pm_07.js:0
+[111577273ms] [ERROR] Refused to execute script from 'http://localhost:3000/_next/static/chunks/2v0t000-pm_07.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled. @ http://localhost:3000/?x=1794215442819:0
+[111577568ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/_next/static/chunks/0rdn6c3yqvdyf.js:0
+[111577568ms] [ERROR] Refused to execute script from 'http://localhost:3000/_next/static/chunks/0rdn6c3yqvdyf.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled. @ http://localhost:3000/?x=1794215442819:0
+[111577590ms] ChunkLoadError: Failed to load chunk /_next/static/chunks/0rdn6c3yqvdyf.js from module 7899
+    at http://localhost:3000/_next/static/chunks/turbopack-2u1d16houkiyo.js:1:5286
+[111577638ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/_next/static/chunks/2v0t000-pm_07.js:0
+[111577638ms] [ERROR] Refused to execute script from 'http://localhost:3000/_next/static/chunks/2v0t000-pm_07.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled. @ http://localhost:3000/?x=1794215442819:0
+[111586211ms] [WARNING] Warning: <path> length cannot be measured when vector-effect is non-scaling-stroke and the element isn't proportionally scaled. @ http://localhost:3000/_next/static/chunks/06eqea1-lf864.js:0
+[111586610ms] [WARNING] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead. @ http://localhost:3000/_next/static/chunks/2bw5_sxonru-u.js:0
+[111586645ms] [WARNING] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead. @ http://localhost:3000/_next/static/chunks/2bw5_sxonru-u.js:0
+[111593568ms] [WARNING] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead. @ http://localhost:3000/_next/static/chunks/2bw5_sxonru-u.js:0
+[111597758ms] [WARNING] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead. @ http://localhost:3000/_next/static/chunks/2bw5_sxonru-u.js:0
+[111629136ms] [WARNING] Warning: <path> length cannot be measured when vector-effect is non-scaling-stroke and the element isn't proportionally scaled. @ http://localhost:3000/_next/static/chunks/06eqea1-lf864.js:0
+[111629218ms] [WARNING] Warning: <path> length cannot be measured when vector-effect is non-scaling-stroke and the element isn't proportionally scaled. @ http://localhost:3000/_next/static/chunks/06eqea1-lf864.js:0
+[111629626ms] [WARNING] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead. @ http://localhost:3000/_next/static/chunks/2bw5_sxonru-u.js:0
+[111629651ms] [WARNING] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead. @ http://localhost:3000/_next/static/chunks/2bw5_sxonru-u.js:0
+[111636590ms] [WARNING] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead. @ http://localhost:3000/_next/static/chunks/2bw5_sxonru-u.js:0
+[111642053ms] [WARNING] Warning: <path> length cannot be measured when vector-effect is non-scaling-stroke and the element isn't proportionally scaled. @ http://localhost:3000/_next/static/chunks/2gwi0kk9juepb.js:0
+[111642462ms] [WARNING] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead. @ http://localhost:3000/_next/static/chunks/2bw5_sxonru-u.js:0
+[111642496ms] [WARNING] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead. @ http://localhost:3000/_next/static/chunks/2bw5_sxonru-u.js:0
+[111649751ms] [WARNING] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead. @ http://localhost:3000/_next/static/chunks/2bw5_sxonru-u.js:0
+[111665451ms] [WARNING] Warning: <path> length cannot be measured when vector-effect is non-scaling-stroke and the element isn't proportionally scaled. @ http://localhost:3000/_next/static/chunks/2gwi0kk9juepb.js:0
+[111665844ms] [WARNING] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead. @ http://localhost:3000/_next/static/chunks/2bw5_sxonru-u.js:0
+[111665878ms] [WARNING] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead. @ http://localhost:3000/_next/static/chunks/2bw5_sxonru-u.js:0
+[111674608ms] [WARNING] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead. @ http://localhost:3000/_next/static/chunks/2bw5_sxonru-u.js:0
+[112307680ms] [WARNING] Warning: <path> length cannot be measured when vector-effect is non-scaling-stroke and the element isn't proportionally scaled. @ http://localhost:3000/_next/static/chunks/2_5p6u0myowyg.js:0
+[114201125ms] [WARNING] Warning: <path> length cannot be measured when vector-effect is non-scaling-stroke and the element isn't proportionally scaled. @ http://localhost:3000/_next/static/chunks/1da7-dxbrzn2i.js:0
+[114201518ms] [WARNING] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead. @ http://localhost:3000/_next/static/chunks/2bw5_sxonru-u.js:0
+[114201556ms] [WARNING] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead. @ http://localhost:3000/_next/static/chunks/2bw5_sxonru-u.js:0
+[114243087ms] [WARNING] Warning: <path> length cannot be measured when vector-effect is non-scaling-stroke and the element isn't proportionally scaled. @ http://localhost:3000/_next/static/chunks/1da7-dxbrzn2i.js:0
+[114243482ms] [WARNING] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead. @ http://localhost:3000/_next/static/chunks/2bw5_sxonru-u.js:0
+[114243518ms] [WARNING] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead. @ http://localhost:3000/_next/static/chunks/2bw5_sxonru-u.js:0
+[114290244ms] [WARNING] Warning: <path> length cannot be measured when vector-effect is non-scaling-stroke and the element isn't proportionally scaled. @ http://localhost:3000/_next/static/chunks/1da7-dxbrzn2i.js:0
+[114290633ms] [WARNING] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead. @ http://localhost:3000/_next/static/chunks/2bw5_sxonru-u.js:0
+[114290670ms] [WARNING] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead. @ http://localhost:3000/_next/static/chunks/2bw5_sxonru-u.js:0
+[114326682ms] [WARNING] Warning: <path> length cannot be measured when vector-effect is non-scaling-stroke and the element isn't proportionally scaled. @ http://localhost:3000/_next/static/chunks/3y03u2ckw-ak-.js:0
+[114327081ms] [WARNING] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead. @ http://localhost:3000/_next/static/chunks/2bw5_sxonru-u.js:0
+[114327113ms] [WARNING] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead. @ http://localhost:3000/_next/static/chunks/2bw5_sxonru-u.js:0
+[114377546ms] [WARNING] Warning: <path> length cannot be measured when vector-effect is non-scaling-stroke and the element isn't proportionally scaled. @ http://localhost:3000/_next/static/chunks/2ftnrm40cynk-.js:0
+[114377948ms] [WARNING] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead. @ http://localhost:3000/_next/static/chunks/2bw5_sxonru-u.js:0
+[114377981ms] [WARNING] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead. @ http://localhost:3000/_next/static/chunks/2bw5_sxonru-u.js:0
+[114385163ms] [WARNING] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead. @ http://localhost:3000/_next/static/chunks/2bw5_sxonru-u.js:0
+[114420133ms] [WARNING] Warning: <path> length cannot be measured when vector-effect is non-scaling-stroke and the element isn't proportionally scaled. @ http://localhost:3000/_next/static/chunks/3eq4cioy8wxj7.js:0
+[114420531ms] [WARNING] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead. @ http://localhost:3000/_next/static/chunks/2bw5_sxonru-u.js:0
+[114420566ms] [WARNING] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead. @ http://localhost:3000/_next/static/chunks/2bw5_sxonru-u.js:0
+[114452826ms] [WARNING] Warning: <path> length cannot be measured when vector-effect is non-scaling-stroke and the element isn't proportionally scaled. @ http://localhost:3000/_next/static/chunks/34clc1zd-ugq1.js:0
+[114453232ms] [WARNING] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead. @ http://localhost:3000/_next/static/chunks/2bw5_sxonru-u.js:0
+[114453270ms] [WARNING] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead. @ http://localhost:3000/_next/static/chunks/2bw5_sxonru-u.js:0
+[115355323ms] [WARNING] Warning: <path> length cannot be measured when vector-effect is non-scaling-stroke and the element isn't proportionally scaled. @ http://localhost:3000/_next/static/chunks/0i3m6ejdwmxtd.js:0
+[115355721ms] [WARNING] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead. @ http://localhost:3000/_next/static/chunks/2bw5_sxonru-u.js:0
+[115355752ms] [WARNING] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead. @ http://localhost:3000/_next/static/chunks/2bw5_sxonru-u.js:0
+[115365570ms] [WARNING] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead. @ http://localhost:3000/_next/static/chunks/2bw5_sxonru-u.js:0
+[115391479ms] [WARNING] Warning: <path> length cannot be measured when vector-effect is non-scaling-stroke and the element isn't proportionally scaled. @ http://localhost:3000/_next/static/chunks/0i3m6ejdwmxtd.js:0
+[115391888ms] [WARNING] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead. @ http://localhost:3000/_next/static/chunks/2bw5_sxonru-u.js:0
+[115391921ms] [WARNING] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead. @ http://localhost:3000/_next/static/chunks/2bw5_sxonru-u.js:0
+[115399146ms] [WARNING] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead. @ http://localhost:3000/_next/static/chunks/2bw5_sxonru-u.js:0
+[115443775ms] [WARNING] Warning: <path> length cannot be measured when vector-effect is non-scaling-stroke and the element isn't proportionally scaled. @ http://localhost:3000/_next/static/chunks/06nf-2uy1h_ys.js:0
+[115444186ms] [WARNING] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead. @ http://localhost:3000/_next/static/chunks/2bw5_sxonru-u.js:0
+[115444220ms] [WARNING] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead. @ http://localhost:3000/_next/static/chunks/2bw5_sxonru-u.js:0
+[115451445ms] [WARNING] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead. @ http://localhost:3000/_next/static/chunks/2bw5_sxonru-u.js:0
+[115455669ms] [WARNING] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead. @ http://localhost:3000/_next/static/chunks/2bw5_sxonru-u.js:0
+[115524818ms] [WARNING] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead. @ http://localhost:3000/_next/static/chunks/2bw5_sxonru-u.js:0

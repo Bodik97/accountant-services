@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Сальдо — бухгалтерський супровід ФОП і ТОВ</title>
+  <meta name="description" content="Ведемо бухгалтерію ФОП і ТОВ під ключ: облік, звітність, зарплата, захист від штрафів. Безкоштовна консультація та перевірка вашої звітності.">
+  <meta property="og:title" content="Сальдо — бухгалтерія без хаосу і штрафів">
+  <meta property="og:description" content="Облік, звітність і податки для ФОП і ТОВ. Перша консультація безкоштовно.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0A1714">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230A1714'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-family='Georgia' font-size='20' fill='%23C9A45C'%3EС%3C/text%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400..600;1,7..72,400..500&family=Onest:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- ЗАМІНІТЬ: назву, телефон, адресу на реальні -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AccountingService",
+    "name": "Сальдо",
+    "description": "Бухгалтерський супровід ФОП і ТОВ",
+    "telephone": "+380000000000",
+    "email": "hello@example.com",
+    "areaServed": "UA",
+    "priceRange": "₴₴"
+  }
+  </script>
+</head>
+<body>
+  <canvas id="scene" aria-hidden="true"></canvas>
+  <div class="vignette" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="container site-header__row">
+      <a class="logo" href="#top" aria-label="Сальдо — на початок">Сальдо<span>.</span></a>
+      <nav class="nav" aria-label="Основна навігація">
+        <a href="#services">Послуги</a>
+        <a href="#process">Як працюємо</a>
+        <a href="#pricing">Ціни</a>
+        <a href="#faq">Питання</a>
+      </nav>
+      <a class="btn btn--small btn--primary" href="#contact">Консультація</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- 1. HERO -->
+    <section class="panel hero" id="hero">
+      <div class="panel__inner container">
+        <div class="hero__content">
+          <p class="eyebrow" data-hero>Бухгалтерський супровід ФОП і ТОВ</p>
+          <h1 class="hero__title" data-split>Бухгалтерія без хаосу, штрафів і нервів</h1>
+          <p class="hero__lead" data-hero>Ведемо облік, здаємо звітність вчасно і захищаємо від помилок перед податковою. Ви займаєтесь бізнесом — ми цифрами.</p>
+          <div class="hero__actions" data-hero>
+            <a class="btn btn--primary btn--magnetic" href="#contact">Безкоштовна консультація <span aria-hidden="true">→</span></a>
+            <a class="btn btn--ghost" href="#pricing">Дізнатися ціни</a>
+          </div>
+          <!-- ЗАМІНІТЬ реальними цифрами -->
+          <ul class="hero__trust" data-hero>
+            <li><b><span data-count="12">12</span>+</b><span>років досвіду</span></li>
+            <li><b><span data-count="300">300</span>+</b><span>клієнтів на супроводі</span></li>
+            <li><b><span data-count="0">0</span> ₴</b><span>штрафів з нашої вини</span></li>
+          </ul>
+        </div>
+      </div>
+      <a class="scroll-hint" href="#problem" aria-label="Гортати далі"><span></span>Гортайте</a>
+    </section>
+
+    <!-- 2. ПРОБЛЕМА -->
+    <section class="panel" id="problem">
+      <div class="panel__inner container split">
+        <div>
+          <p class="eyebrow" data-reveal>Знайомо?</p>
+          <h2 data-reveal>Цифри не повинні <em>відбирати</em> ваш сон</h2>
+          <ul class="pains">
+            <li class="pain"><span class="pain__text">Дедлайни звітності, які постійно «підкрадаються»</span><span class="pain__line"></span></li>
+            <li class="pain"><span class="pain__text">Закони змінюються швидше, ніж встигаєте прочитати</span><span class="pain__line"></span></li>
+            <li class="pain"><span class="pain__text">Листи з податкової і страх штрафів</span><span class="pain__line"></span></li>
+            <li class="pain"><span class="pain__text">ПРРО, ЄСВ, ліміти доходу — голова обертом</span><span class="pain__line"></span></li>
+            <li class="pain"><span class="pain__text">Вечори з таблицями замість відпочинку</span><span class="pain__line"></span></li>
+          </ul>
+          <p class="stamp" data-stamp>Беремо це на себе ✓</p>
+        </div>
+        <div class="split__spacer" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- 3. ПОСЛУГИ -->
+    <section class="panel" id="services">
+      <div class="panel__inner container">
+        <div class="section-head">
+          <p class="eyebrow" data-reveal>Послуги</p>
+          <h2 data-reveal>Все, що потрібно вашому бізнесу, <em>в одних руках</em></h2>
+        </div>
+        <div class="cards">
+          <article class="card" data-reveal>
+            <span class="card__num">01</span>
+            <h3>Супровід ФОП</h3>
+            <p>Облік доходів, декларації, ЄСВ, контроль лімітів і груп єдиного податку.</p>
+            <span class="card__price">від 1 500 ₴/міс</span>
+          </article>
+          <article class="card" data-reveal>
+            <span class="card__num">02</span>
+            <h3>Бухгалтерія ТОВ</h3>
+            <p>Повний облік, первинні документи, ПДВ, фінансова і податкова звітність.</p>
+            <span class="card__price">від 6 000 ₴/міс</span>
+          </article>
+          <article class="card" data-reveal>
+            <span class="card__num">03</span>
+            <h3>Зарплата і кадри</h3>
+            <p>Нарахування, лікарняні, відпустки, оформлення працівників без помилок.</p>
+            <span class="card__price">від 300 ₴/працівник</span>
+          </article>
+          <article class="card" data-reveal>
+            <span class="card__num">04</span>
+            <h3>Податкові консультації</h3>
+            <p>Оптимізація податків в межах закону, вибір системи оподаткування.</p>
+            <span class="card__price">від 800 ₴/год</span>
+          </article>
+          <article class="card" data-reveal>
+            <span class="card__num">05</span>
+            <h3>Відновлення обліку</h3>
+            <p>Наведемо лад у запущеній бухгалтерії за попередні періоди.</p>
+            <span class="card__price">індивідуально</span>
+          </article>
+          <article class="card" data-reveal>
+            <span class="card__num">06</span>
+            <h3>Реєстрація та закриття</h3>
+            <p>Відкриття і закриття ФОП і ТОВ, зміна КВЕДів, реєстрація ПДВ.</p>
+            <span class="card__price">від 2 000 ₴</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. ЯК ПРАЦЮЄМО (горизонтальний скрол) -->
+    <section class="panel process" id="process">
+      <div class="panel__inner process__inner">
+        <div class="container section-head">
+          <p class="eyebrow" data-reveal>Як працюємо</p>
+          <h2 data-reveal>Чотири кроки до <em>спокою</em></h2>
+        </div>
+        <div class="process__viewport">
+          <ol class="process__track">
+            <li class="step">
+              <span class="step__num">01</span>
+              <h3>Безкоштовна консультація</h3>
+              <p>15–30 хвилин розмови: розбираємо вашу ситуацію і відповідаємо на питання.</p>
+            </li>
+            <li class="step">
+              <span class="step__num">02</span>
+              <h3>Аудит обліку</h3>
+              <p>Перевіряємо звітність і документи, знаходимо ризики ще до податкової.</p>
+            </li>
+            <li class="step">
+              <span class="step__num">03</span>
+              <h3>Договір і фіксована ціна</h3>
+              <p>Прозорі умови без прихованих платежів. Фінансова відповідальність — у договорі.</p>
+            </li>
+            <li class="step">
+              <span class="step__num">04</span>
+              <h3>Супровід щомісяця</h3>
+              <p>Особистий бухгалтер, звіт у Telegram і нагадування про всі платежі.</p>
+            </li>
+          </ol>
+          <div class="process__progress" aria-hidden="true"><span></span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. ГАРАНТІЇ / РЕЗУЛЬТАТ -->
+    <section class="panel" id="results">
+      <div class="panel__inner container split">
+        <div>
+          <p class="eyebrow" data-reveal>Чому нам довіряють</p>
+          <h2 data-reveal>Ми відповідаємо за результат <em>грошима</em>, а не словами</h2>
+          <ul class="guarantees">
+            <li data-reveal><b>Фінансова відповідальність</b><span>Якщо штраф виник з нашої вини — компенсуємо його. Прописано в договорі.</span></li>
+            <li data-reveal><b>Особистий бухгалтер</b><span>Одна людина, яка знає ваш бізнес. Відповідь протягом робочого дня.</span></li>
+            <li data-reveal><b>Прозорість щомісяця</b><span>Короткий звіт: що здано, що сплатити і коли. Без бухгалтерської мови.</span></li>
+          </ul>
+        </div>
+        <div class="split__spacer" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- 6. ЦІНИ + FAQ (світла панель) -->
+    <section class="panel panel--paper" id="pricing">
+      <div class="paper">
+        <div class="container">
+          <div class="section-head section-head--center">
+            <p class="eyebrow" data-reveal>Ціни</p>
+            <h2 data-reveal>Фіксована ціна. <em>Без сюрпризів.</em></h2>
+            <p class="section-lead" data-reveal>Точну вартість назвемо після безкоштовної консультації — вона залежить від кількості операцій і працівників.</p>
+          </div>
+          <!-- ЗАМІНІТЬ ціни на свої -->
+          <div class="plans">
+            <article class="plan" data-reveal>
+              <h3>ФОП Старт</h3>
+              <p class="plan__for">ФОП 1–3 групи без працівників</p>
+              <p class="plan__price"><span>від</span> 1 500 <small>₴/міс</small></p>
+              <ul>
+                <li>Облік доходів і контроль ліміту</li>
+                <li>Декларації та звітність</li>
+                <li>Розрахунок ЄП і ЄСВ</li>
+                <li>Нагадування про платежі</li>
+              </ul>
+              <a class="btn btn--outline" href="#contact" data-plan="ФОП Старт">Обрати</a>
+            </article>
+            <article class="plan plan--featured" data-reveal>
+              <span class="plan__badge">Найпопулярніший</span>
+              <h3>Бізнес</h3>
+              <p class="plan__for">ФОП з працівниками або ТОВ на єдиному податку</p>
+              <p class="plan__price"><span>від</span> 4 000 <small>₴/міс</small></p>
+              <ul>
+                <li>Все з пакета «ФОП Старт»</li>
+                <li>Зарплата і кадри до 5 осіб</li>
+                <li>Первинні документи</li>
+                <li>Особистий бухгалтер</li>
+                <li>Консультації без ліміту</li>
+              </ul>
+              <a class="btn btn--primary" href="#contact" data-plan="Бізнес">Обрати</a>
+            </article>
+            <article class="plan" data-reveal>
+              <h3>ТОВ Повний</h3>
+              <p class="plan__for">ТОВ на загальній системі, платники ПДВ</p>
+              <p class="plan__price"><span>від</span> 8 000 <small>₴/міс</small></p>
+              <ul>
+                <li>Повний бухгалтерський облік</li>
+                <li>ПДВ і реєстрація податкових накладних</li>
+                <li>Фінансова звітність</li>
+                <li>Супровід перевірок</li>
+              </ul>
+              <a class="btn btn--outline" href="#contact" data-plan="ТОВ Повний">Обрати</a>
+            </article>
+          </div>
+
+          <div class="faq" id="faq">
+            <h2 class="faq__title" data-reveal>Часті питання</h2>
+            <details data-reveal>
+              <summary>Як перейти до вас від іншого бухгалтера?</summary>
+              <p>Ми самі заберемо документи і доступи, перевіримо попередню звітність і повідомимо, якщо знайдемо ризики. Для вас перехід займе одну розмову.</p>
+            </details>
+            <details data-reveal>
+              <summary>Чи потрібно приїжджати в офіс?</summary>
+              <p>Ні. Працюємо онлайн по всій Україні: документи — через електронний документообіг, спілкування — в Telegram або телефоном.</p>
+            </details>
+            <details data-reveal>
+              <summary>Що, якщо через помилку бухгалтера буде штраф?</summary>
+              <p>Ми несемо фінансову відповідальність за свою роботу — це прописано в договорі. Штраф, що виник з нашої вини, компенсуємо.</p>
+            </details>
+            <details data-reveal>
+              <summary>Скільки коштує консультація?</summary>
+              <p>Перша консультація і перевірка вашої поточної звітності — безкоштовно і без зобов'язань.</p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. КОНТАКТ -->
+    <section class="panel contact" id="contact">
+      <div class="panel__inner container contact__grid">
+        <div>
+          <p class="eyebrow" data-reveal>Перший крок</p>
+          <h2 data-reveal>Безкоштовна перевірка вашої <em>звітності</em></h2>
+          <p class="section-lead" data-reveal>Залиште контакти — передзвонимо протягом 15 хвилин у робочий час, розберемо вашу ситуацію і назвемо точну ціну.</p>
+          <!-- ЗАМІНІТЬ контакти на реальні -->
+          <ul class="contacts" data-reveal>
+            <li><span>Телефон</span><a href="tel:+380000000000">+38 (000) 000-00-00</a></li>
+            <li><span>Telegram</span><a href="https://t.me/your_username" target="_blank" rel="noopener">@your_username</a></li>
+            <li><span>Email</span><a href="mailto:hello@example.com">hello@example.com</a></li>
+          </ul>
+        </div>
+
+        <form class="lead-form" id="lead-form" novalidate data-reveal>
+          <div class="field">
+            <label for="f-name">Ваше ім'я</label>
+            <input id="f-name" name="name" type="text" autocomplete="name" required placeholder="Олена">
+          </div>
+          <div class="field">
+            <label for="f-phone">Телефон</label>
+            <input id="f-phone" name="phone" type="tel" autocomplete="tel" required placeholder="+38 (0__) ___-__-__">
+            <small class="field__error" aria-live="polite"></small>
+          </div>
+          <div class="field">
+            <label for="f-type">Хто ви?</label>
+            <select id="f-type" name="type">
+              <option>ФОП</option>
+              <option>ТОВ</option>
+              <option>Ще не зареєстрований</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-plan">Пакет</label>
+            <select id="f-plan" name="plan">
+              <option>Ще не визначився</option>
+              <option>ФОП Старт</option>
+              <option>Бізнес</option>
+              <option>ТОВ Повний</option>
+            </select>
+          </div>
+          <button class="btn btn--primary btn--block btn--magnetic" type="submit">Отримати консультацію <span aria-hidden="true">→</span></button>
+          <p class="lead-form__note">Безкоштовно і без зобов'язань. Ми не передаємо ваші дані третім особам.</p>
+          <div class="lead-form__success" role="status" hidden>
+            <b>Дякуємо! Заявку отримано.</b>
+            <span>Передзвонимо протягом 15 хвилин у робочий час.</span>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__row">
+      <a class="logo" href="#top">Сальдо<span>.</span></a>
+      <p>© 2026 Сальдо. Бухгалтерський супровід ФОП і ТОВ.</p>
+    </div>
+  </footer>
+
+  <a class="mobile-cta" href="#contact">Безкоштовна консультація</a>
+
+  <script type="importmap">
+    { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js" } }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

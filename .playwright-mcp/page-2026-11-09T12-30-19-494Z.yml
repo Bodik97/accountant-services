@@ -1,0 +1,697 @@
+- generic [ref=f9e1]:
+  - link "До змісту" [ref=f9e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=f9e3]:
+    - generic [ref=f9e4]:
+      - link "Сальдо" [ref=f9e6] [cursor=pointer]:
+        - /url: "#top"
+      - generic [ref=f9e7]:
+        - navigation "Основна навігація" [ref=f9e8]:
+          - link "Послуги" [ref=f9e9] [cursor=pointer]:
+            - /url: "#services"
+          - link "Фінанси" [ref=f9e10] [cursor=pointer]:
+            - /url: "#finances"
+          - link "Ціни" [ref=f9e11] [cursor=pointer]:
+            - /url: "#pricing"
+          - link "Питання" [ref=f9e12] [cursor=pointer]:
+            - /url: "#faq"
+        - generic [ref=f9e13]:
+          - link "Увійти" [ref=f9e14] [cursor=pointer]:
+            - /url: "#"
+          - link "Консультація" [ref=f9e16] [cursor=pointer]:
+            - /url: "#contact"
+  - main [ref=f9e18]:
+    - generic [ref=f9e19]:
+      - generic [ref=f9e20]:
+        - generic [aria-hidden]:
+          - generic:
+            - list:
+              - listitem: ЄСВ · III кв. 5 707 ₴
+              - listitem: ЄП 5% · III кв. 13 650 ₴
+              - listitem: Декларація · подано
+              - listitem: Дохід · жовтень 95 000 ₴
+              - listitem: ВЗ 1% · III кв. 2 730 ₴
+              - listitem: Ліміт · 9% використано
+              - listitem: ЄСВ · IV кв. до 19.01
+              - listitem: Звіт клієнту · надіслано
+              - listitem: ЄСВ · III кв. 5 707 ₴
+              - listitem: ЄП 5% · III кв. 13 650 ₴
+              - listitem: Декларація · подано
+              - listitem: Дохід · жовтень 95 000 ₴
+              - listitem: ВЗ 1% · III кв. 2 730 ₴
+              - listitem: Ліміт · 9% використано
+              - listitem: ЄСВ · IV кв. до 19.01
+              - listitem: Звіт клієнту · надіслано
+        - navigation "Розділи сторінки" [ref=f9e21]:
+          - list [ref=f9e22]:
+            - listitem [ref=f9e23]:
+              - link "Про мене" [ref=f9e25] [cursor=pointer]:
+                - /url: "#about"
+            - listitem [ref=f9e26]:
+              - link "Послуги" [ref=f9e27] [cursor=pointer]:
+                - /url: "#services"
+            - listitem [ref=f9e28]:
+              - link "Фінанси" [ref=f9e29] [cursor=pointer]:
+                - /url: "#finances"
+            - listitem [ref=f9e30]:
+              - link "Співпраця" [ref=f9e31] [cursor=pointer]:
+                - /url: "#process"
+        - generic [ref=f9e32]:
+          - heading "Облік ФОПпід повним контролем" [level=1] [ref=f9e33]:
+            - generic [ref=f9e36]: Облік ФОП
+            - generic [ref=f9e39]: під повним
+            - generic [ref=f9e42]: контролем
+          - paragraph [ref=f9e43]: Я особисто веду облік ФОП, здаю звітність у строк і нагадую про кожен платіж. Ви займаєтесь бізнесом, я — цифрами. Перша консультація безкоштовна.
+          - generic [ref=f9e44]:
+            - link "Записатися на консультацію" [ref=f9e45] [cursor=pointer]:
+              - /url: "#contact"
+            - link "Гортати до розділу «Про мене»" [ref=f9e50] [cursor=pointer]:
+              - /url: "#about"
+      - generic [ref=f9e54]:
+        - 'img "Скульптура-графік: 12 стовпчиків доходу за рік, останній — поточний місяць" [ref=f9e56]'
+        - generic [ref=f9e59]:
+          - generic [ref=f9e61]:
+            - generic [ref=f9e62]: "Виконано:"
+            - generic [ref=f9e66]:
+              - paragraph [ref=f9e67]: Декларацію подано в ДПС
+              - paragraph [ref=f9e68]: 2 хв тому
+              - paragraph [ref=f9e69]: Приклад інтерфейсу
+          - generic [ref=f9e72]:
+            - generic [ref=f9e73]:
+              - paragraph [ref=f9e75]: Податки сплачено
+              - generic [ref=f9e76]: Сплачено
+            - generic [ref=f9e80]:
+              - generic [ref=f9e81]:
+                - term [ref=f9e82]: ЄСВ
+                - definition [ref=f9e83]: 0 ₴
+              - generic [ref=f9e84]:
+                - term [ref=f9e85]: Єдиний податок
+                - definition [ref=f9e86]: 0 ₴
+            - generic [ref=f9e87]:
+              - generic [ref=f9e88]: Разом
+              - generic [ref=f9e89]: 0 ₴
+            - paragraph [ref=f9e90]: Приклад інтерфейсу
+          - generic [ref=f9e93]:
+            - generic [ref=f9e94]:
+              - generic [ref=f9e95]:
+                - paragraph [ref=f9e96]: Дохід за рік
+                - paragraph [ref=f9e97]: 0 ₴
+              - generic [ref=f9e98]:
+                - generic [ref=f9e102]: Зростання
+                - generic [ref=f9e103]: 0%
+            - 'img "Дохід за рік: зростання 18% за Січень — грудень" [ref=f9e105]'
+            - generic [ref=f9e109]:
+              - generic [ref=f9e110]: Січень — грудень
+              - generic [ref=f9e111]: Приклад інтерфейсу
+          - generic [ref=f9e113]:
+            - paragraph [ref=f9e119]: Наступний платіж
+            - paragraph [ref=f9e120]: ЄСВ за IV квартал
+            - generic [ref=f9e121]:
+              - generic [ref=f9e122]: "19.01"
+              - generic [ref=f9e123]: 0 ₴
+            - paragraph [ref=f9e124]: Приклад інтерфейсу
+    - generic [ref=f9e126]:
+      - generic [ref=f9e127]:
+        - generic [ref=f9e128]:
+          - paragraph [ref=f9e129]: Про мене
+          - heading "Ваш особистий бухгалтер, а не «відділ»" [level=2] [ref=f9e131]:
+            - generic [aria-hidden] [ref=f9e133]: Ваш
+            - generic [aria-hidden] [ref=f9e135]: особистий
+            - generic [aria-hidden] [ref=f9e137]: бухгалтер,
+            - generic [aria-hidden] [ref=f9e139]: а
+            - generic [aria-hidden] [ref=f9e141]: не
+            - generic [aria-hidden] [ref=f9e143]: «відділ»
+          - paragraph [ref=f9e144]: Я веду облік ФОП, а за можливості — і ТОВ. Готую і подаю звітність, рахую податки, стежу за лімітом доходу і нагадую про платежі. Ви щомісяця бачите, що зроблено і що на черзі.
+        - list [ref=f9e145]:
+          - listitem [ref=f9e146]:
+            - generic [ref=f9e147]:
+              - heading "Працюю з вами особисто" [level=3] [ref=f9e148]
+              - paragraph [ref=f9e149]: Ваш облік веду я, без менеджерів і передачі між людьми.
+          - listitem [ref=f9e150]:
+            - generic [ref=f9e151]:
+              - heading "Онлайн по всій Україні" [level=3] [ref=f9e152]
+              - paragraph [ref=f9e153]: Документи — через електронний документообіг, зв'язок — у Telegram або телефоном.
+          - listitem [ref=f9e154]:
+            - generic [ref=f9e155]:
+              - heading "Фіксована ціна в договорі" [level=3] [ref=f9e156]
+              - paragraph [ref=f9e157]: Обсяг робіт і вартість погоджуємо до старту.
+        - generic [ref=f9e158]:
+          - heading "Що ми беремо на себе" [level=3] [ref=f9e159]
+          - list [ref=f9e160]:
+            - listitem [ref=f9e161]:
+              - generic [ref=f9e162]: Терміни звітності, про які легко забути
+              - generic [ref=f9e163]: Декларація ФОП
+            - listitem [ref=f9e164]:
+              - generic [ref=f9e165]: Податкові правила, що часто змінюються
+              - generic [ref=f9e166]: Зміни до ПКУ
+            - listitem [ref=f9e167]:
+              - generic [ref=f9e168]: Запити з податкової і ризик штрафів
+              - generic [ref=f9e169]: Лист ДПС
+            - listitem [ref=f9e170]:
+              - generic [ref=f9e171]: ЄСВ, ПРРО, ліміти доходу — багато деталей
+              - generic [ref=f9e172]: ЄСВ
+            - listitem [ref=f9e173]:
+              - generic [ref=f9e174]: Вечори з таблицями замість відпочинку
+              - generic [ref=f9e175]: Книга обліку
+      - generic [ref=f9e176]:
+        - img "Стос пластин — шари обліку, складені в порядок" [ref=f9e177]
+        - generic [ref=f9e187]:
+          - generic [aria-hidden] [ref=f9e188]:
+            - generic [ref=f9e189]: ОК
+            - generic [ref=f9e190]: ІМ
+            - generic [ref=f9e191]: ВС
+          - paragraph [ref=f9e192]:
+            - 'generic "Заглушка: замініть реальними даними" [ref=f9e193]': "[ДАНІ]"
+          - paragraph [ref=f9e194]: клієнтів на супроводі
+        - generic [ref=f9e196]:
+          - paragraph [ref=f9e197]:
+            - 'generic "Заглушка: замініть реальними даними" [ref=f9e198]': "[ДАНІ]"
+          - paragraph [ref=f9e199]: років досвіду
+        - generic [ref=f9e201]:
+          - generic [ref=f9e202]: "Виконано:"
+          - generic [ref=f9e206]:
+            - paragraph [ref=f9e207]: Звіт за жовтень надіслано
+            - paragraph [ref=f9e208]: сьогодні, 09:00
+            - paragraph [ref=f9e209]: Приклад інтерфейсу
+    - generic [ref=f9e211]:
+      - generic [ref=f9e212]:
+        - paragraph [ref=f9e213]: Що я роблю
+        - heading "Увесь облік ФОП — в одних руках" [level=2] [ref=f9e215]:
+          - generic [aria-hidden] [ref=f9e217]: Увесь
+          - generic [aria-hidden] [ref=f9e219]: облік
+          - generic [aria-hidden] [ref=f9e221]: ФОП
+          - generic [aria-hidden] [ref=f9e223]: —
+          - generic [aria-hidden] [ref=f9e225]: в
+          - generic [aria-hidden] [ref=f9e227]: одних
+          - generic [aria-hidden] [ref=f9e229]: руках
+        - paragraph [ref=f9e230]: Беру на себе рутину, яка забирає вечори і створює ризик штрафів.
+      - generic [ref=f9e231]:
+        - generic [ref=f9e232]:
+          - generic [ref=f9e233]:
+            - heading "Звітність" [level=3] [ref=f9e234]
+            - paragraph [ref=f9e235]: Готую і подаю декларації. Ви бачите, що вже здано і що на черзі.
+          - generic [ref=f9e238]:
+            - generic [ref=f9e239]:
+              - paragraph [ref=f9e244]: Декларації 2026
+              - generic [ref=f9e245]: В роботі
+            - paragraph [ref=f9e247]:
+              - text: "3"
+              - generic [ref=f9e248]: /4
+            - generic [ref=f9e249]:
+              - generic [ref=f9e250]:
+                - generic [ref=f9e251]: Подано за I–III кв. · IV кв. до 09.02
+                - generic [ref=f9e252]: 75%
+              - 'meter "Подано за I–III кв. · IV кв. до 09.02: 3 з 4" [ref=f9e253]'
+            - paragraph [ref=f9e254]: Приклад інтерфейсу
+        - generic [ref=f9e255]:
+          - generic [ref=f9e256]:
+            - heading "Податки" [level=3] [ref=f9e257]
+            - paragraph [ref=f9e258]: Рахую єдиний податок, ЄСВ і військовий збір за кожен квартал.
+          - generic [ref=f9e261]:
+            - paragraph [ref=f9e262]: Єдиний податок 5%, 2026
+            - paragraph [ref=f9e263]: 4 252 ₴
+            - 'img "Єдиний податок 5%, 2026: I кв. — 11 850 ₴, II кв. — 12 900 ₴, III кв. — 13 650 ₴, IV кв. — 14 250 ₴" [ref=f9e264]':
+              - generic [ref=f9e272]:
+                - generic [ref=f9e273]: I кв.
+                - generic [ref=f9e274]: II кв.
+                - generic [ref=f9e275]: III кв.
+                - generic [ref=f9e276]: IV кв.
+            - list [ref=f9e277]:
+              - listitem [ref=f9e278]: "I кв.: 11 850 ₴"
+              - listitem [ref=f9e279]: "II кв.: 12 900 ₴"
+              - listitem [ref=f9e280]: "III кв.: 13 650 ₴"
+              - listitem [ref=f9e281]: "IV кв.: 14 250 ₴"
+            - generic [ref=f9e282]:
+              - generic [ref=f9e283]: "IV кв.: 14 250 ₴"
+              - generic [ref=f9e284]: Приклад інтерфейсу
+        - generic [ref=f9e285]:
+          - generic [ref=f9e286]:
+            - heading "Ліміт доходу" [level=3] [ref=f9e287]
+            - paragraph [ref=f9e288]: Стежу, щоб дохід не перевищив ліміт вашої групи — і попереджаю заздалегідь.
+          - generic [ref=f9e291]:
+            - generic [ref=f9e292]:
+              - paragraph [ref=f9e293]: Ліміт доходу, 3 група
+              - generic [ref=f9e294]: У межах
+            - paragraph [ref=f9e298]: 76 727 ₴
+            - paragraph [ref=f9e299]: з 10 091 049 ₴ на рік
+            - generic [ref=f9e300]:
+              - generic [ref=f9e301]:
+                - generic [ref=f9e302]: Дохід з початку 2026 року
+                - generic [ref=f9e303]: 9%
+              - 'meter "Ліміт доходу, 3 група: використано 9% ліміту" [ref=f9e304]'
+            - paragraph [ref=f9e305]: Приклад інтерфейсу
+        - generic [ref=f9e306]:
+          - generic [ref=f9e307]:
+            - heading "Календар платежів" [level=3] [ref=f9e308]
+            - paragraph [ref=f9e309]: Нагадую, що, скільки і до якої дати сплатити. Ви не пропустите жодного строку.
+          - generic [ref=f9e312]:
+            - paragraph [ref=f9e317]: Платежі ФОП
+            - list [ref=f9e318]:
+              - listitem [ref=f9e319]:
+                - generic "Сплачено" [ref=f9e320]
+                - generic [ref=f9e323]:
+                  - paragraph [ref=f9e324]: ЄСВ за III квартал
+                  - paragraph [ref=f9e325]: сплачено
+                - generic [ref=f9e326]: 5 707 ₴
+              - listitem [ref=f9e327]:
+                - generic "Очікує оплати" [ref=f9e328]
+                - generic [ref=f9e329]:
+                  - paragraph [ref=f9e330]: ЄСВ за IV квартал
+                  - paragraph [ref=f9e331]: до 19.01
+                - generic [ref=f9e332]: 5 707 ₴
+              - listitem [ref=f9e333]:
+                - generic "Очікує оплати" [ref=f9e334]
+                - generic [ref=f9e335]:
+                  - paragraph [ref=f9e336]: Єдиний податок за IV кв.
+                  - paragraph [ref=f9e337]: до 19.02
+                - generic [ref=f9e338]: 14 250 ₴
+            - paragraph [ref=f9e339]: Приклад інтерфейсу
+      - generic [ref=f9e340]:
+        - heading "Усі послуги" [level=3] [ref=f9e341]
+        - paragraph [ref=f9e342]: Натисніть на послугу, щоб побачити, що входить
+      - list [ref=f9e343]:
+        - listitem [ref=f9e344]:
+          - generic [ref=f9e345]:
+            - button "Супровід ФОП Облік доходів, декларації, ЄСВ, контроль лімітів і груп. від [ДАНІ] ₴/міс Що входить" [ref=f9e346]:
+              - generic [aria-hidden] [ref=f9e352]: +
+              - generic [ref=f9e353]: Супровід ФОП
+              - generic [ref=f9e354]: Облік доходів, декларації, ЄСВ, контроль лімітів і груп.
+              - generic [ref=f9e355]:
+                - generic [ref=f9e356]:
+                  - text: від
+                  - 'generic "Заглушка: замініть реальними даними" [ref=f9e357]': "[ДАНІ]"
+                  - text: ₴/міс
+                - generic [ref=f9e358]: Що входить
+            - generic [ref=f9e359]:
+              - list [ref=f9e360]:
+                - listitem [ref=f9e361]: Облік доходів і книга обліку
+                - listitem [ref=f9e365]: Декларація ЄП щокварталу
+                - listitem [ref=f9e369]: Розрахунок ЄП, ЄСВ і військового збору
+                - listitem [ref=f9e373]: Контроль ліміту і групи
+              - link "Обговорити цю послугу" [ref=f9e377] [cursor=pointer]:
+                - /url: "#contact"
+        - listitem [ref=f9e381]:
+          - generic [ref=f9e382]:
+            - 'button "Бухгалтерія ТОВ За домовленістю: облік, первинні документи, фінансова і податкова звітність. від [ДАНІ] ₴/міс Що входить" [ref=f9e383]':
+              - generic [aria-hidden] [ref=f9e389]: +
+              - generic [ref=f9e390]: Бухгалтерія ТОВ
+              - generic [ref=f9e391]: "За домовленістю: облік, первинні документи, фінансова і податкова звітність."
+              - generic [ref=f9e392]:
+                - generic [ref=f9e393]:
+                  - text: від
+                  - 'generic "Заглушка: замініть реальними даними" [ref=f9e394]': "[ДАНІ]"
+                  - text: ₴/міс
+                - generic [ref=f9e395]: Що входить
+            - generic [ref=f9e396]:
+              - list [ref=f9e397]:
+                - listitem [ref=f9e398]: Облік і первинні документи
+                - listitem [ref=f9e402]: Податкова і фінансова звітність
+                - listitem [ref=f9e406]: ПДВ — якщо потрібно
+                - listitem [ref=f9e410]: Беру за домовленістю
+              - link "Обговорити цю послугу" [ref=f9e414] [cursor=pointer]:
+                - /url: "#contact"
+        - listitem [ref=f9e418]:
+          - generic [ref=f9e419]:
+            - button "Зарплата і кадри Нарахування, лікарняні, відпустки, оформлення працівників. від [ДАНІ] ₴/особа Що входить" [ref=f9e420]:
+              - generic [aria-hidden] [ref=f9e427]: +
+              - generic [ref=f9e428]: Зарплата і кадри
+              - generic [ref=f9e429]: Нарахування, лікарняні, відпустки, оформлення працівників.
+              - generic [ref=f9e430]:
+                - generic [ref=f9e431]:
+                  - text: від
+                  - 'generic "Заглушка: замініть реальними даними" [ref=f9e432]': "[ДАНІ]"
+                  - text: ₴/особа
+                - generic [ref=f9e433]: Що входить
+            - generic [ref=f9e434]:
+              - list [ref=f9e435]:
+                - listitem [ref=f9e436]: Нарахування зарплати
+                - listitem [ref=f9e440]: Лікарняні й відпустки
+                - listitem [ref=f9e444]: Звіт з ПДФО і ЄСВ за працівників
+                - listitem [ref=f9e448]: Оформлення і звільнення
+              - link "Обговорити цю послугу" [ref=f9e452] [cursor=pointer]:
+                - /url: "#contact"
+        - listitem [ref=f9e456]:
+          - generic [ref=f9e457]:
+            - button "Податкові консультації Законна оптимізація податків і вибір системи оподаткування. від [ДАНІ] ₴/год Що входить" [ref=f9e458]:
+              - generic [aria-hidden] [ref=f9e464]: +
+              - generic [ref=f9e465]: Податкові консультації
+              - generic [ref=f9e466]: Законна оптимізація податків і вибір системи оподаткування.
+              - generic [ref=f9e467]:
+                - generic [ref=f9e468]:
+                  - text: від
+                  - 'generic "Заглушка: замініть реальними даними" [ref=f9e469]': "[ДАНІ]"
+                  - text: ₴/год
+                - generic [ref=f9e470]: Що входить
+            - generic [ref=f9e471]:
+              - list [ref=f9e472]:
+                - listitem [ref=f9e473]: Вибір групи і системи оподаткування
+                - listitem [ref=f9e477]: Оцінка податкових ризиків
+                - listitem [ref=f9e481]: Допомога з відповіддю на запит ДПС
+                - listitem [ref=f9e485]: Разова або регулярна консультація
+              - link "Обговорити цю послугу" [ref=f9e489] [cursor=pointer]:
+                - /url: "#contact"
+        - listitem [ref=f9e493]:
+          - generic [ref=f9e494]:
+            - button "Відновлення обліку Наведу лад в обліку за попередні періоди. індивідуально Що входить" [ref=f9e495]:
+              - generic [aria-hidden] [ref=f9e501]: +
+              - generic [ref=f9e502]: Відновлення обліку
+              - generic [ref=f9e503]: Наведу лад в обліку за попередні періоди.
+              - generic [ref=f9e504]:
+                - generic [ref=f9e505]: індивідуально
+                - generic [ref=f9e506]: Що входить
+            - generic [ref=f9e507]:
+              - list [ref=f9e508]:
+                - listitem [ref=f9e509]: Аналіз пропущених періодів
+                - listitem [ref=f9e513]: Уточнюючі декларації
+                - listitem [ref=f9e517]: Звірка розрахунків з ДПС
+                - listitem [ref=f9e521]: План виправлення помилок
+              - link "Обговорити цю послугу" [ref=f9e525] [cursor=pointer]:
+                - /url: "#contact"
+        - listitem [ref=f9e529]:
+          - generic [ref=f9e530]:
+            - button "Реєстрація і закриття Відкриття і закриття ФОП і ТОВ, КВЕДи, реєстрація ПДВ. від [ДАНІ] ₴ Що входить" [ref=f9e531]:
+              - generic [aria-hidden] [ref=f9e537]: +
+              - generic [ref=f9e538]: Реєстрація і закриття
+              - generic [ref=f9e539]: Відкриття і закриття ФОП і ТОВ, КВЕДи, реєстрація ПДВ.
+              - generic [ref=f9e540]:
+                - generic [ref=f9e541]:
+                  - text: від
+                  - 'generic "Заглушка: замініть реальними даними" [ref=f9e542]': "[ДАНІ]"
+                  - text: ₴
+                - generic [ref=f9e543]: Що входить
+            - generic [ref=f9e544]:
+              - list [ref=f9e545]:
+                - listitem [ref=f9e546]: Відкриття ФОП
+                - listitem [ref=f9e550]: Зміна КВЕДів і групи
+                - listitem [ref=f9e554]: Реєстрація платником ПДВ
+                - listitem [ref=f9e558]: Закриття ФОП
+              - link "Обговорити цю послугу" [ref=f9e562] [cursor=pointer]:
+                - /url: "#contact"
+    - generic [ref=f9e567]:
+      - generic [ref=f9e568]:
+        - generic [ref=f9e569]:
+          - paragraph [ref=f9e570]: Фінанси
+          - heading "Ваші фінанси прозоро" [level=2] [ref=f9e572]:
+            - generic [aria-hidden] [ref=f9e574]: Ваші
+            - generic [aria-hidden] [ref=f9e576]: фінанси
+            - generic [aria-hidden] [ref=f9e578]: прозоро
+          - paragraph [ref=f9e579]: Щомісяця я надсилаю вам короткий звіт. Чотири цифри, які показують стан бізнесу. Гортайте — поясню кожну.
+        - list [ref=f9e580]:
+          - listitem [ref=f9e581]:
+            - generic [ref=f9e582]:
+              - generic [ref=f9e583]: "01"
+              - heading "Дохід за місяць" [level=3] [ref=f9e584]
+            - paragraph [ref=f9e585]: Скільки надійшло на рахунок і як це співвідноситься з лімітом вашої групи.
+          - listitem [ref=f9e586]:
+            - generic [ref=f9e587]:
+              - generic [ref=f9e588]: "02"
+              - heading "Податкове навантаження" [level=3] [ref=f9e589]
+            - paragraph [ref=f9e590]: Яка частка доходу йде на податки і внески — без сюрпризів наприкінці кварталу.
+          - listitem [ref=f9e591]:
+            - generic [ref=f9e592]:
+              - generic [ref=f9e593]: "03"
+              - heading "Розподіл платежів" [level=3] [ref=f9e594]
+            - paragraph [ref=f9e595]: Скільки сплатити єдиного податку, ЄСВ і військового збору і до якої дати.
+          - listitem [ref=f9e596]:
+            - generic [ref=f9e597]:
+              - generic [ref=f9e598]: "04"
+              - heading "Стан рахунку" [level=3] [ref=f9e599]
+            - paragraph [ref=f9e600]: Залишок на рахунку після всіх обов'язкових платежів.
+      - figure "Приклад інтерфейсу" [ref=f9e604]:
+        - 'img "Приклад звіту в телефоні: дохід 95 000 ₴, податки 8% (7 602 ₴), залишок 87 398 ₴" [ref=f9e605]':
+          - generic [aria-hidden] [ref=f9e608]:
+            - generic [ref=f9e609]: 9:41
+            - generic [ref=f9e614]:
+              - generic [ref=f9e615]:
+                - generic [ref=f9e616]: Б
+                - generic [ref=f9e617]:
+                  - paragraph [ref=f9e618]: Звіт за жовтень
+                  - paragraph [ref=f9e619]: від вашого бухгалтера · 1 листопада
+              - generic [ref=f9e620]:
+                - generic [ref=f9e621]:
+                  - paragraph [ref=f9e622]: Дохід за місяць
+                  - generic [ref=f9e623]:
+                    - paragraph [ref=f9e624]: 95 000 ₴
+                    - generic [ref=f9e625]: +6%
+                  - paragraph [ref=f9e631]: "Ліміт 3 групи: використано 9% за рік"
+                - generic [ref=f9e632]:
+                  - paragraph [ref=f9e633]: Податкове навантаження
+                  - paragraph [ref=f9e634]: 8%
+                  - generic [ref=f9e637]:
+                    - generic [ref=f9e638]: Податки 7 602 ₴
+                    - generic [ref=f9e639]: Ваше 92%
+                - generic [ref=f9e640]:
+                  - paragraph [ref=f9e641]: Що сплатити
+                  - list [ref=f9e642]:
+                    - listitem [ref=f9e643]:
+                      - generic [ref=f9e645]: Єдиний податок
+                      - generic [ref=f9e646]: 4 750 ₴
+                    - listitem [ref=f9e647]:
+                      - generic [ref=f9e649]: ЄСВ
+                      - generic [ref=f9e650]: 1 902 ₴
+                    - listitem [ref=f9e651]:
+                      - generic [ref=f9e653]: Військовий збір
+                      - generic [ref=f9e654]: 950 ₴
+                  - paragraph [ref=f9e655]:
+                    - generic [ref=f9e656]: ✓
+                    - text: Реквізити надіслано
+                - generic [ref=f9e657]:
+                  - paragraph [ref=f9e658]: Залишається вам
+                  - paragraph [ref=f9e659]: 87 398 ₴
+                  - paragraph [ref=f9e660]: Вільні гроші після всіх обов’язкових платежів
+                - generic [ref=f9e661]: Усе сплачено вчасно. Наступний звіт — 1 грудня.
+    - generic [ref=f9e665]:
+      - generic [ref=f9e666]:
+        - paragraph [ref=f9e667]: Співпраця
+        - heading "Як ми починаємо роботу" [level=2] [ref=f9e669]:
+          - generic [aria-hidden] [ref=f9e671]: Як
+          - generic [aria-hidden] [ref=f9e673]: ми
+          - generic [aria-hidden] [ref=f9e675]: починаємо
+          - generic [aria-hidden] [ref=f9e677]: роботу
+      - list [ref=f9e678]:
+        - listitem [ref=f9e679]:
+          - generic [ref=f9e680]:
+            - generic [ref=f9e681]:
+              - generic [ref=f9e682]: "1"
+              - generic [ref=f9e683]: 15–30 хвилин
+            - heading "Безкоштовна консультація" [level=3] [ref=f9e684]
+            - paragraph [ref=f9e685]: Розбираю вашу ситуацію і відповідаю на питання.
+        - listitem [ref=f9e686]:
+          - generic [ref=f9e687]:
+            - generic [ref=f9e688]:
+              - generic [ref=f9e689]: "2"
+              - 'generic "Заглушка: замініть реальними даними" [ref=f9e691]': "[ДАНІ: строк]"
+            - heading "Перевірка обліку" [level=3] [ref=f9e692]
+            - paragraph [ref=f9e693]: Дивлюсь звітність і документи, показую ризики.
+        - listitem [ref=f9e694]:
+          - generic [ref=f9e695]:
+            - generic [ref=f9e696]:
+              - generic [ref=f9e697]: "3"
+              - 'generic "Заглушка: замініть реальними даними" [ref=f9e699]': "[ДАНІ: строк]"
+            - heading "Договір і фіксована ціна" [level=3] [ref=f9e700]
+            - paragraph [ref=f9e701]: Обсяг робіт і вартість фіксуємо в договорі.
+        - listitem [ref=f9e702]:
+          - generic [ref=f9e703]:
+            - generic [ref=f9e704]:
+              - generic [ref=f9e705]: "4"
+              - generic [ref=f9e706]: Щомісяця
+            - heading "Щомісячний супровід" [level=3] [ref=f9e707]
+            - paragraph [ref=f9e708]: Веду облік, надсилаю звіт і нагадую про платежі.
+    - generic [ref=f9e710]:
+      - generic [ref=f9e711]:
+        - paragraph [ref=f9e712]: Тарифи
+        - heading "Фіксована ціна без сюрпризів" [level=2] [ref=f9e714]:
+          - generic [aria-hidden] [ref=f9e716]: Фіксована
+          - generic [aria-hidden] [ref=f9e718]: ціна
+          - generic [aria-hidden] [ref=f9e720]: без
+          - generic [aria-hidden] [ref=f9e722]: сюрпризів
+        - paragraph [ref=f9e723]: Точну вартість назвемо після безкоштовної консультації. Вона залежить від кількості операцій і працівників.
+      - generic [ref=f9e724]:
+        - generic [ref=f9e725]:
+          - heading "ФОП Старт" [level=3] [ref=f9e727]
+          - paragraph [ref=f9e728]: ФОП 1–3 групи без працівників
+          - paragraph [ref=f9e729]:
+            - generic [ref=f9e730]: від
+            - 'generic "Заглушка: замініть реальними даними" [ref=f9e732]': "[ДАНІ]"
+            - generic [ref=f9e733]: ₴/міс
+          - list [ref=f9e734]:
+            - listitem [ref=f9e735]: Облік доходів і контроль ліміту
+            - listitem [ref=f9e739]: Декларації та звітність
+            - listitem [ref=f9e743]: Розрахунок ЄП і ЄСВ
+            - listitem [ref=f9e747]: Нагадування про платежі
+          - link "Обрати «ФОП Старт»" [ref=f9e752] [cursor=pointer]:
+            - /url: "#contact"
+        - generic [ref=f9e757]:
+          - generic [ref=f9e758]:
+            - heading "Бізнес" [level=3] [ref=f9e759]
+            - generic [ref=f9e760]: Рекомендуємо
+          - paragraph [ref=f9e761]: ФОП з працівниками або ТОВ на єдиному податку
+          - paragraph [ref=f9e762]:
+            - generic [ref=f9e763]: від
+            - 'generic "Заглушка: замініть реальними даними" [ref=f9e765]': "[ДАНІ]"
+            - generic [ref=f9e766]: ₴/міс
+          - list [ref=f9e767]:
+            - listitem [ref=f9e768]: Все з пакета «ФОП Старт»
+            - listitem [ref=f9e772]: Зарплата і кадри
+            - listitem [ref=f9e776]: Первинні документи
+            - listitem [ref=f9e780]: Щомісячний звіт
+            - listitem [ref=f9e784]: Консультації без ліміту
+          - link "Обрати «Бізнес»" [ref=f9e789] [cursor=pointer]:
+            - /url: "#contact"
+        - generic [ref=f9e794]:
+          - heading "ТОВ Повний" [level=3] [ref=f9e796]
+          - paragraph [ref=f9e797]: ТОВ — за домовленістю, після консультації
+          - paragraph [ref=f9e798]:
+            - generic [ref=f9e799]: від
+            - 'generic "Заглушка: замініть реальними даними" [ref=f9e801]': "[ДАНІ]"
+            - generic [ref=f9e802]: ₴/міс
+          - list [ref=f9e803]:
+            - listitem [ref=f9e804]: Повний бухгалтерський облік
+            - listitem [ref=f9e808]: ПДВ і податкові накладні
+            - listitem [ref=f9e812]: Фінансова звітність
+            - listitem [ref=f9e816]: Супровід перевірок
+          - link "Обрати «ТОВ Повний»" [ref=f9e821] [cursor=pointer]:
+            - /url: "#contact"
+      - paragraph [ref=f9e826]: Перевірка поточної звітності — безкоштовно для всіх пакетів.
+    - generic [ref=f9e828]:
+      - generic [ref=f9e829]:
+        - paragraph [ref=f9e830]: Гарантії
+        - heading "Відповідальність, закріплена договором" [level=2] [ref=f9e832]:
+          - generic [aria-hidden] [ref=f9e834]: Відповідальність,
+          - generic [aria-hidden] [ref=f9e836]: закріплена
+          - generic [aria-hidden] [ref=f9e838]: договором
+      - list [ref=f9e839]:
+        - listitem [ref=f9e840]:
+          - generic [ref=f9e841]:
+            - heading "Відповідальність у договорі" [level=3] [ref=f9e845]
+            - paragraph [ref=f9e846]:
+              - text: Компенсація штрафу, якщо він виник з моєї вини.
+              - 'generic "Заглушка: замініть реальними даними" [ref=f9e847]': "[ДАНІ: підтвердити умови договору]"
+        - listitem [ref=f9e848]:
+          - generic [ref=f9e849]:
+            - heading "Ви працюєте напряму зі мною" [level=3] [ref=f9e853]
+            - paragraph [ref=f9e854]: "Ніяких посередників: я знаю ваш бізнес і відповідаю особисто."
+        - listitem [ref=f9e855]:
+          - generic [ref=f9e856]:
+            - heading "Звіт щомісяця" [level=3] [ref=f9e860]
+            - paragraph [ref=f9e861]: "Коротко: що здано, що сплатити і до якої дати."
+      - generic [ref=f9e862]:
+        - img "Місце для фото бухгалтера" [ref=f9e863]:
+          - generic [ref=f9e864]: "[ДАНІ: фото]"
+        - generic [ref=f9e865]:
+          - paragraph [ref=f9e866]: Хто веде ваш облік
+          - 'heading "[ДАНІ: Ім''я Прізвище]" [level=3] [ref=f9e867]':
+            - 'generic "Заглушка: замініть реальними даними" [ref=f9e868]': "[ДАНІ: Ім'я Прізвище]"
+          - paragraph [ref=f9e869]: Бухгалтер ФОП, за домовленістю — ТОВ
+          - generic [ref=f9e870]:
+            - generic [ref=f9e871]:
+              - term [ref=f9e872]: Досвід
+              - definition [ref=f9e873]:
+                - 'generic "Заглушка: замініть реальними даними" [ref=f9e874]': "[ДАНІ]"
+                - text: років
+            - generic [ref=f9e875]:
+              - term [ref=f9e876]: Кваліфікація
+              - definition [ref=f9e877]:
+                - 'generic "Заглушка: замініть реальними даними" [ref=f9e878]': "[ДАНІ: освіта, сертифікати — якщо є]"
+            - generic [ref=f9e879]:
+              - term [ref=f9e880]: Спеціалізація
+              - definition [ref=f9e881]: Облік ФОП і ТОВ, звітність, ПДВ
+    - generic [ref=f9e883]:
+      - generic [ref=f9e884]:
+        - paragraph [ref=f9e885]: Питання
+        - heading "Часті питання" [level=2] [ref=f9e887]:
+          - generic [aria-hidden] [ref=f9e889]: Часті
+          - generic [aria-hidden] [ref=f9e891]: питання
+      - generic [ref=f9e892]:
+        - group [ref=f9e893]:
+          - generic "Як перейти до вас від іншого бухгалтера?" [ref=f9e894] [cursor=pointer]
+        - group [ref=f9e899]:
+          - generic "Чи потрібно кудись приїжджати?" [ref=f9e900] [cursor=pointer]
+        - group [ref=f9e905]:
+          - generic "Що, якщо через помилку бухгалтера буде штраф?" [ref=f9e906] [cursor=pointer]
+        - group [ref=f9e911]:
+          - generic "Скільки коштує консультація?" [ref=f9e912] [cursor=pointer]
+        - group [ref=f9e917]:
+          - generic "Що входить у бухгалтерський супровід ФОП?" [ref=f9e918] [cursor=pointer]
+        - group [ref=f9e923]:
+          - generic "Чи ведете ви бухгалтерію ТОВ?" [ref=f9e924] [cursor=pointer]
+    - generic [ref=f9e930]:
+      - generic [ref=f9e931]:
+        - generic [ref=f9e932]:
+          - paragraph [ref=f9e933]: Заявка
+          - heading "Безкоштовна перевірка вашої звітності" [level=2] [ref=f9e935]:
+            - generic [aria-hidden] [ref=f9e937]: Безкоштовна
+            - generic [aria-hidden] [ref=f9e939]: перевірка
+            - generic [aria-hidden] [ref=f9e941]: вашої
+            - generic [aria-hidden] [ref=f9e943]: звітності
+          - paragraph [ref=f9e944]: Залиште контакти. Розберу вашу ситуацію і назву точну вартість супроводу.
+        - list [ref=f9e945]:
+          - listitem [ref=f9e946]:
+            - generic [ref=f9e947]: "1"
+            - generic [ref=f9e948]:
+              - text: Передзвоню або напишу в робочий час.
+              - 'generic "Заглушка: замініть реальними даними" [ref=f9e949]': "[ДАНІ: протягом якого часу]"
+          - listitem [ref=f9e950]:
+            - generic [ref=f9e951]: "2"
+            - generic [ref=f9e952]: За 15–30 хвилин розберемо вашу ситуацію.
+          - listitem [ref=f9e953]:
+            - generic [ref=f9e954]: "3"
+            - generic [ref=f9e955]: Назву вартість супроводу. Рішення — за вами.
+        - list [ref=f9e956]:
+          - listitem [ref=f9e957]:
+            - link "Телефон +38 (000) 000-00-00" [ref=f9e958] [cursor=pointer]:
+              - /url: tel:+380000000000
+              - generic [ref=f9e959]: Телефон
+              - generic [ref=f9e960]: +38 (000) 000-00-00
+          - listitem [ref=f9e961]:
+            - link "Telegram @your_username" [ref=f9e962] [cursor=pointer]:
+              - /url: https://t.me/your_username
+              - generic [ref=f9e963]: Telegram
+              - generic [ref=f9e964]: "@your_username"
+          - listitem [ref=f9e965]:
+            - link "Email hello@example.com" [ref=f9e966] [cursor=pointer]:
+              - /url: mailto:hello@example.com
+              - generic [ref=f9e967]: Email
+              - generic [ref=f9e968]: hello@example.com
+        - paragraph [ref=f9e969]:
+          - text: "Години роботи:"
+          - 'generic "Заглушка: замініть реальними даними" [ref=f9e970]': "[ДАНІ: години роботи]"
+      - generic [ref=f9e972]:
+        - generic [ref=f9e973]:
+          - paragraph [ref=f9e974]: Заявка на консультацію
+          - generic [ref=f9e975]: Безкоштовно
+        - generic [ref=f9e978]:
+          - generic [ref=f9e979]: Ваше ім'я
+          - textbox "Ваше ім'я" [ref=f9e980]:
+            - /placeholder: Олена
+        - generic [ref=f9e981]:
+          - generic [ref=f9e982]: Телефон
+          - textbox "Телефон" [ref=f9e983]:
+            - /placeholder: +38 067 123 45 67
+        - group "Як зручніше зв'язатися" [ref=f9e984]:
+          - generic [ref=f9e986]:
+            - generic "Дзвінок" [ref=f9e987]:
+              - radio "Дзвінок" [checked] [ref=f9e988]
+              - generic [ref=f9e990] [cursor=pointer]
+            - generic "Telegram" [ref=f9e996]:
+              - radio "Telegram" [ref=f9e997]
+              - generic [ref=f9e999] [cursor=pointer]
+            - generic "Viber" [ref=f9e1003]:
+              - radio "Viber" [ref=f9e1004]
+              - generic [ref=f9e1006] [cursor=pointer]
+        - generic [ref=f9e1009]:
+          - text: Сайт
+          - textbox [ref=f9e1010]
+        - button "Записатися на консультацію" [ref=f9e1011]
+        - paragraph [ref=f9e1016]: Без зобов'язань. Дані використовую лише для відповіді на заявку.
+  - contentinfo [ref=f9e1017]:
+    - generic [ref=f9e1018]:
+      - link "Сальдо" [ref=f9e1019] [cursor=pointer]:
+        - /url: "#top"
+      - generic [ref=f9e1020]:
+        - link "+38 (000) 000-00-00" [ref=f9e1021] [cursor=pointer]:
+          - /url: tel:+380000000000
+        - paragraph [ref=f9e1022]:
+          - 'generic "Заглушка: замініть реальними даними" [ref=f9e1023]': "[ДАНІ: ФОП або ТОВ, ЄДРПОУ / РНОКПП, адреса]"
+        - paragraph [ref=f9e1024]: © 2026 Сальдо. Особистий бухгалтер для ФОП. ТОВ — за домовленістю.
+  - alert [ref=f9e1025]

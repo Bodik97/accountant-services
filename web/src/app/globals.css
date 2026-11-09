@@ -1,0 +1,198 @@
+@import "tailwindcss";
+
+/*
+ * Дизайн-система «Сальдо» — монохромний fintech.
+ * Кольори: чорний, білий, світло-сірий, два сірі + один функціональний акцент (зелений статус).
+ *   gray-text  #5E5E5E — другорядний текст на світлому (5.9:1). #8A8A8A на білому дає лише 3.4:1.
+ *   gray-mid   #8A8A8A — другорядний текст на чорному (5.7:1) і лінії.
+ *   gray-light #D9D9D9 — лінії й рамки на світлому, текст на чорному.
+ *   success    #22C55E — лише заливка бейджа з чорним текстом (8.7:1) або крапка-індикатор поруч із текстом.
+ *   danger     — лише помилки форми (функціональний колір).
+ * Шрифти: Wix Madefor Display (заголовки) + Wix Madefor Text (текст). Одна родина, з кирилицею.
+ */
+@theme {
+  --color-black: #0a0a0a;
+  --color-white: #ffffff;
+  --color-surface: #f4f4f4;       /* світлі картки і світла половина hero */
+  --color-surface-dark: #111111;  /* темні картки */
+  --color-gray-mid: #8a8a8a;
+  --color-gray-light: #d9d9d9;
+  --color-gray-text: #5e5e5e;
+  --color-success: #22c55e;
+  --color-danger: #ef6a5a;
+  --color-danger-ink: #b42318;    /* текст і рамки помилок на білому (6.6:1) */
+  --color-hairline: rgb(10 10 10 / 0.08);
+  --color-hairline-dark: rgb(255 255 255 / 0.12);
+
+  --font-display: var(--font-heading), system-ui, sans-serif;
+  --font-sans: var(--font-body), system-ui, sans-serif;
+
+  --breakpoint-sm: 30rem;
+  --breakpoint-3xl: 120rem;
+
+  /* Типографіка: великий щільний гротеск, line-height ~1.05 */
+  --text-display: clamp(2.75rem, 1.6rem + 5vw, 6rem);
+  --text-h2: clamp(2.25rem, 1.5rem + 3vw, 4.25rem);
+  --text-h3: clamp(1.25rem, 1.1rem + 0.5vw, 1.625rem);
+  --text-lead: clamp(1.0625rem, 1rem + 0.3vw, 1.25rem);
+  --text-caption: 0.8125rem;
+  --text-metric: clamp(1.75rem, 1.4rem + 1.4vw, 2.5rem);
+  --text-price: clamp(2rem, 1.7rem + 1.2vw, 2.75rem);
+
+  --radius-card: 24px;
+  --radius-card-sm: 20px;
+  --radius-card-lg: 28px;
+
+  --shadow-card: 0 1px 2px rgb(10 10 10 / 0.04), 0 12px 32px -12px rgb(10 10 10 / 0.18);
+  --shadow-float: 0 2px 4px rgb(10 10 10 / 0.05), 0 24px 48px -16px rgb(10 10 10 / 0.28);
+
+  --ease-out-3: cubic-bezier(0.215, 0.61, 0.355, 1); /* power3.out */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);    /* expo.out */
+}
+
+@utility container-x {
+  width: 100%;
+  max-width: 80rem;
+  margin-inline: auto;
+  padding-inline: clamp(1rem, 0.5rem + 2.5vw, 2.5rem);
+  @media (width >= 120rem) { max-width: 90rem; }
+}
+
+@utility section-y {
+  padding-block: clamp(5rem, 3.5rem + 5vw, 10rem);
+}
+
+/* Скло: напівпрозорість + розмиття + тонка біла обводка 1px */
+@utility glass {
+  background: rgb(255 255 255 / 0.55);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  border: 1px solid rgb(255 255 255 / 0.8);
+}
+@utility glass-dark {
+  background: rgb(17 17 17 / 0.6);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  border: 1px solid rgb(255 255 255 / 0.14);
+}
+
+@layer base {
+  html { -webkit-text-size-adjust: 100%; scroll-padding-top: 5rem; }
+  body {
+    background: var(--color-white);
+    color: var(--color-black);
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: clip;
+  }
+  @media (width >= 48rem) { body { font-size: 1.0625rem; } }
+  h1, h2, h3 { font-family: var(--font-display); font-weight: 600; text-wrap: balance; }
+  h1 { font-size: var(--text-display); line-height: 1.02; letter-spacing: -0.04em; }
+  h2 { font-size: var(--text-h2); line-height: 1.05; letter-spacing: -0.035em; }
+  h3 { font-size: var(--text-h3); line-height: 1.2; letter-spacing: -0.02em; }
+  p { text-wrap: pretty; }
+  :focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+  ::selection { background: var(--color-black); color: var(--color-white); }
+}
+
+@layer components {
+  .caption { font-size: var(--text-caption); line-height: 1.4; font-variant-numeric: tabular-nums; }
+  .metric { font-family: var(--font-display); font-weight: 600; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; line-height: 1; }
+
+  /* Заглушка [ДАНІ…]: помітна, щоб не сплутати зі справжнім фактом */
+  .placeholder {
+    display: inline-block; padding: 0 0.35em; border: 1px dashed currentColor; border-radius: 6px;
+    font-size: 0.85em; letter-spacing: 0; white-space: normal;
+  }
+
+  .faq-item summary { list-style: none; }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  /* FAQ: кругла кнопка +/−. Відкрито — коло заливається чорним, хрест повертається, вертикальна риска зникає.
+     Стан береться з data-state (JS ставить його одразу при кліку), без JS / з reduced motion — з [open]. */
+  .faq-item { transition: box-shadow .3s var(--ease-out-3); }
+  .faq-item:has(summary:focus-visible) { outline: 2px solid var(--color-black); outline-offset: 3px; }
+  .faq-icon {
+    color: var(--color-black); background: var(--color-surface);
+    transition: background-color .35s var(--ease-out-3), color .35s var(--ease-out-3), scale .45s cubic-bezier(.34, 1.56, .64, 1);
+  }
+  .faq-cross { transition: transform .5s cubic-bezier(.34, 1.56, .64, 1); }
+  .faq-icon-v { transition: transform .4s cubic-bezier(.34, 1.56, .64, 1), opacity .25s linear; }
+  @media (hover: hover) {
+    .faq-item summary:hover .faq-icon { background: var(--color-gray-light); }
+  }
+  .faq-item summary:active .faq-icon { scale: .92; }
+  .faq-item:is([open]:not([data-state="closed"]), [data-state="open"]) .faq-icon { background: var(--color-black); color: var(--color-white); }
+  .faq-item:is([open]:not([data-state="closed"]), [data-state="open"]) .faq-cross { transform: rotate(180deg); }
+  .faq-item:is([open]:not([data-state="closed"]), [data-state="open"]) .faq-icon-v { transform: scaleY(0); opacity: 0; }
+  @media (hover: hover) {
+    .faq-item:is([open]:not([data-state="closed"]), [data-state="open"]) summary:hover .faq-icon { background: #262626; }
+  }
+
+  /* Гарантії: пункт договору підсвічується, бульбашки переписки з'являються під час прокрутки.
+     Лише в повному режимі (.motion знімається в lite і з reduced motion) і де є scroll-driven animations. */
+  .g-mark { background: linear-gradient(rgb(34 197 94 / .16), rgb(34 197 94 / .16)) no-repeat 0 0 / 100% 100%; }
+  @supports (animation-timeline: view()) {
+    .motion .g-mark { animation: g-mark linear both; animation-timeline: view(); animation-range: entry 40% cover 45%; }
+    .motion .g-bubble { animation: g-bubble linear both; animation-timeline: view(); animation-range: entry 30% cover 35%; }
+    .motion .g-bubble--late { animation-range: entry 70% cover 45%; }
+  }
+
+}
+
+/* Lenis */
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+.lenis.lenis-stopped { overflow: clip; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
+
+/* Заголовки чекають на SplitText; якщо скрипт не спрацював — показуються через 2.5 с */
+/* Заголовки секцій (нижче першого екрана) чекають на SplitText. h1 hero ховаємо лише на десктопі:
+   на телефоні він має бути видимим одразу (LCP). Запасний показ — через 2.5 с. */
+.motion main section:not(#hero) [data-split] { visibility: hidden; animation: split-fallback 0s 2.5s forwards; }
+@media (min-width: 64rem) { .motion #hero [data-split] { visibility: hidden; animation: split-fallback 0s 2.5s forwards; } }
+@keyframes split-fallback { to { visibility: visible; } }
+/* Елементи вступу hero ховаються, доки GSAP їх не підготує (без «блимання»); запасний показ через 2.5 с */
+.motion:not(.motion-ready) :is(#hero [data-widget], #hero [data-progress-nav]) { visibility: hidden; animation: split-fallback 0s 2.5s forwards; }
+@keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes g-mark { from { background-size: 0% 100%; } to { background-size: 100% 100%; } }
+@keyframes g-bubble { from { opacity: 0; transform: translateY(10px) scale(.97); } to { opacity: 1; transform: none; } }
+
+/* «Фінанси» під час pin: неактивні кроки без фону й рамки (текст лишається контрастним) */
+[data-finances].is-pinned [data-finance-step]:not(.is-active) { background-color: transparent; border-color: transparent; }
+/* Підказки біля віджетів «Фінансів» на десктопі показуються лише під час pin (по кроках) */
+@media (min-width: 64rem) { [data-finances]:not(.is-pinned) [data-finance-hint] { display: none; } }
+
+/* Hero: шари фону зсуваються за мишею плавно */
+.hero-follow [style*="translate"] { transition: translate 0.9s cubic-bezier(0.16, 1, 0.3, 1); }
+
+/* Мобільне меню: аркуш з'їжджає зверху, пункти з'являються по черзі (--i). Лише в повному режимі (.motion) */
+.motion .menu-sheet { animation: menu-sheet 0.5s var(--ease-out-expo) both; }
+.motion .menu-backdrop { animation: menu-fade 0.3s ease-out both; }
+.motion .menu-item { animation: menu-item 0.6s var(--ease-out-expo) both; animation-delay: calc(0.08s + var(--i, 0) * 0.05s); }
+@keyframes menu-sheet { from { transform: translateY(-1.5rem); opacity: 0; } }
+@keyframes menu-item { from { transform: translateY(1rem); opacity: 0; } }
+@keyframes menu-fade { from { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .menu-sheet, .menu-backdrop, .menu-item { animation: none !important; } }
+
+/* «Усі послуги»: м'яка пульсація кнопки «+», поки картку не відкрили */
+.motion .svc-ping { animation: svc-ping 2.6s cubic-bezier(0, 0, 0.2, 1) infinite; }
+@keyframes svc-ping { 0% { transform: scale(1); opacity: 0.9; } 70%, 100% { transform: scale(1.6); opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .motion .svc-ping { animation: none; opacity: 0; } }
+
+/* Hero-фото: повільний «наїзд» камери і смуги світла від жалюзі */
+.hero-kenburns { transform-origin: 65% 40%; }
+.motion .hero-kenburns { animation: hero-kenburns 28s ease-in-out infinite alternate; }
+@keyframes hero-kenburns { from { transform: scale(1); } to { transform: scale(1.12) translate(-2%, 1.5%); } }
+.hero-blinds {
+  background: repeating-linear-gradient(115deg, rgb(255 255 255 / 0) 0 38px, rgb(255 236 200 / 0.55) 38px 70px, rgb(255 255 255 / 0) 70px 96px);
+  mask-image: radial-gradient(ellipse 70% 60% at 70% 30%, black, transparent 75%);
+}
+.motion .hero-blinds { animation: hero-blinds 18s ease-in-out infinite alternate; }
+@keyframes hero-blinds { from { background-position: 0 0; } to { background-position: 160px 0; } }
+@media (prefers-reduced-motion: reduce) { .motion :is(.hero-kenburns, .hero-blinds) { animation: none; } }
