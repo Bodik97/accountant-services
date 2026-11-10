@@ -1,9 +1,8 @@
-import { z } from "zod";
-
 export const contactMethods = ["Дзвінок", "Telegram", "Viber"] as const;
 
 /**
- * Правила полів — спільні для клієнта (підказки під полями) і сервера (zod нижче).
+ * Правила полів — спільні для клієнта (підказки під полями) і сервера (zod — у lead-schema.server.ts,
+ * окремо, щоб zod не потрапляв у клієнтський бандл).
  * Ім'я: 2–60 символів, літери (зокрема українські), пробіл, апостроф, дефіс; без цифр і символів.
  * Телефон: український номер, 9 цифр після +380 (на сервері приймаємо також 0XXXXXXXXX).
  */
@@ -54,27 +53,6 @@ export function phoneError(digits: string): string | null {
   if (digits.length < 9) return leadErrors.phoneShort;
   return null;
 }
-
-export const leadSchema = z.object({
-  name: z.string().transform(normalizeName).superRefine((v, ctx) => {
-    const e = nameError(v);
-    if (e) ctx.addIssue({ code: "custom", message: e });
-  }),
-  phone: z
-    .string()
-    .transform((v) => v.replace(/\D/g, ""))
-    .superRefine((d, ctx) => {
-      if (!d) ctx.addIssue({ code: "custom", message: leadErrors.phoneEmpty });
-      else if (!/^(380(?!38)[1-9]\d{8}|0[1-9]\d{8})$/.test(d)) ctx.addIssue({ code: "custom", message: leadErrors.phoneShort });
-    }),
-  method: z.enum(contactMethods).default("Дзвінок"),
-  plan: z.string().max(60).optional().default(""),
-  // Захист від ботів: приховане поле має бути порожнім; ts — час відкриття форми (обов'язковий)
-  hp_extra: z.string().max(0).optional(),
-  ts: z.coerce.number().int().positive(),
-});
-
-export type Lead = z.infer<typeof leadSchema>;
 
 export type LeadState =
   | { status: "idle" }

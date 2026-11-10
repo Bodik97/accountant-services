@@ -1,4 +1,4 @@
-import type { Lead } from "./lead-schema";
+import type { Lead } from "./lead-schema.server";
 
 const escape = (s: string) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 

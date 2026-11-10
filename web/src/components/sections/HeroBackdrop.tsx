@@ -49,8 +49,8 @@ export default function HeroBackdrop() {
               alt=""
               fill
               placeholder="blur"
+              preload
               sizes="(min-width: 1024px) 60vw, 120vw"
-              quality={70}
               className="object-cover object-[60%_40%] [filter:grayscale(0.7)_contrast(1.05)_brightness(0.95)]"
             />
           </div>

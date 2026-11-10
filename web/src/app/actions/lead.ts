@@ -2,7 +2,8 @@
 
 import { headers } from "next/headers";
 import { z } from "zod";
-import { leadSchema, type LeadState } from "@/lib/lead-schema";
+import { type LeadState } from "@/lib/lead-schema";
+import { leadSchema } from "@/lib/lead-schema.server";
 import { sendLead } from "@/lib/telegram";
 
 const SEND_FAILED = "Не вдалося надіслати заявку. Подзвоніть або напишіть у Telegram.";

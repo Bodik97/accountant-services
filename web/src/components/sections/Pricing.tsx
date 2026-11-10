@@ -16,9 +16,9 @@ export default function Pricing() {
     <section id="pricing" className="section-y bg-white">
       <div className="container-x">
         <SectionHead
-          label="Тарифи"
-          title="Фіксована ціна без сюрпризів"
-          intro="Точну вартість назву після безкоштовної консультації. Вона залежить від кількості операцій і працівників."
+          label="Ціни"
+          title="Скільки коштує спокій"
+          intro="Точну суму називаю після безкоштовної консультації і фіксую в договорі. Вона залежить від кількості операцій і працівників."
         />
         <div className="mt-14 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
           {plans.map((p) => (
@@ -50,7 +50,7 @@ function PlanCard({ plan: p, onChoose }: { plan: Plan; onChoose: () => void }) {
   const muted = dark ? "text-gray-mid" : "text-gray-text";
 
   return (
-    <Card variant={dark ? "dark" : "light"} radius="lg" className={`flex min-w-0 flex-col p-6 sm:p-8 ${dark ? "max-lg:order-first md:max-lg:col-span-2" : ""}`} data-plan-col>
+    <Card variant={dark ? "dark" : "light"} radius="lg" className={`flex min-w-0 flex-col p-6 sm:p-8 ${dark ? "md:max-lg:order-first md:max-lg:col-span-2" : ""}`} data-plan-col>
       <div className="flex items-center justify-between gap-3">
         <h3>{p.name}</h3>
         {dark && <span className="rounded-full bg-white px-3 py-1 text-[0.75rem] font-medium text-black">{plansCopy.recommended}</span>}
