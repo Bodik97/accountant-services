@@ -6,6 +6,7 @@ import Button from "@/components/ui/Button";
 import T from "@/components/ui/T";
 import { ArrowRight } from "@/components/ui/icons";
 import { PhoneIcon, TelegramIcon, ViberIcon } from "@/components/ui/ContactIcons";
+import LeadModal from "@/components/LeadModal";
 
 /**
  * Шапка — завжди закріплена зверху (не ховається при прокрутці).
@@ -14,6 +15,7 @@ import { PhoneIcon, TelegramIcon, ViberIcon } from "@/components/ui/ContactIcons
  */
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const [consult, setConsult] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [active, setActive] = useState("");
   const burger = useRef<HTMLButtonElement>(null);
@@ -131,7 +133,17 @@ export default function Header() {
               </a>
             ))}
           </nav>
-          <Button href="#contact" size="sm">Консультація</Button>
+          {/* Відкриває вікно заявки; без JS — звичайне посилання на форму внизу сторінки */}
+          <Button
+            href="#contact"
+            size="sm"
+            onClick={(e) => {
+              e.preventDefault();
+              setConsult(true);
+            }}
+          >
+            Консультація
+          </Button>
         </div>
       </div>
 
@@ -208,6 +220,8 @@ export default function Header() {
           <div aria-hidden="true" onClick={() => setOpen(false)} className="menu-backdrop min-h-6 flex-1 bg-black/40" />
         </div>
       </div>
+      {/* <dialog> відкривається у top layer, тож положення всередині шапки не впливає на вигляд */}
+      <LeadModal plan={null} open={consult} onClose={() => setConsult(false)} />
     </header>
   );
 }

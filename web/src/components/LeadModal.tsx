@@ -1,9 +1,10 @@
 "use client";
 
 import { useCallback, useEffect, useId, useRef, useState } from "react";
-import { formCopy, plans, plansCopy } from "@/content/site";
+import { contact, formCopy, plans, plansCopy } from "@/content/site";
 import LeadForm from "@/components/LeadForm";
 import T from "@/components/ui/T";
+import Badge from "@/components/ui/Badge";
 import { Check } from "@/components/ui/icons";
 
 export type Plan = (typeof plans)[number];
@@ -11,7 +12,7 @@ export type Plan = (typeof plans)[number];
 const DURATION = 400; // мс, як duration-400 у класах нижче
 
 /**
- * Модальне вікно заявки на тариф. Нативний <dialog> + showModal(): фокус усередині, Esc, решта сторінки inert.
+ * Модальне вікно заявки на тариф (plan) або загальної заявки на консультацію (plan = null). Нативний <dialog> + showModal(): фокус усередині, Esc, решта сторінки inert.
  * Телефон — нижня шторка (bottom sheet), md+ — панель по центру. Клік по фону закриває,
  * фокус повертається на кнопку, що відкрила вікно; сторінка під вікном не прокручується.
  * Стан анімації — атрибут data-state на <dialog> (без перерендеру); з reduced motion — без затримки.
@@ -91,7 +92,7 @@ export default function LeadModal({ plan, open, onClose }: { plan: Plan | null; 
       />
       <div className="pointer-events-none absolute inset-0 flex items-end justify-center md:items-center md:p-6">
         <div
-          className="pointer-events-auto relative flex max-h-[92dvh] w-full flex-col overflow-hidden rounded-t-[var(--radius-card-lg)] bg-white shadow-[var(--shadow-float)] transition-[translate,scale,opacity] duration-400 ease-out-expo md:max-h-[min(90dvh,52rem)] md:max-w-[34rem] md:rounded-[var(--radius-card-lg)] max-md:group-data-[state=closed]/dlg:translate-y-full md:group-data-[state=closed]/dlg:translate-y-4 md:group-data-[state=closed]/dlg:scale-[0.97] md:group-data-[state=closed]/dlg:opacity-0"
+          className="pointer-events-auto relative flex max-h-[96dvh] w-full flex-col overflow-hidden rounded-t-[var(--radius-card-lg)] bg-white shadow-[var(--shadow-float)] transition-[translate,scale,opacity] duration-400 ease-out-expo md:max-h-[min(90dvh,52rem)] md:max-w-[34rem] lg:max-w-[60rem] md:rounded-[var(--radius-card-lg)] max-md:group-data-[state=closed]/dlg:translate-y-full md:group-data-[state=closed]/dlg:translate-y-4 md:group-data-[state=closed]/dlg:scale-[0.97] md:group-data-[state=closed]/dlg:opacity-0"
         >
           {/* Ручка шторки (декоративна) */}
           <span aria-hidden="true" className="absolute left-1/2 top-2 h-1 w-10 -translate-x-1/2 rounded-full bg-black/15 md:hidden" />
@@ -104,10 +105,12 @@ export default function LeadModal({ plan, open, onClose }: { plan: Plan | null; 
             <span aria-hidden="true">×</span>
           </button>
 
-          <div className="overflow-y-auto overscroll-contain px-5 pb-[max(1.5rem,env(safe-area-inset-bottom))] pt-7 sm:px-8 sm:pb-8 sm:pt-8">
-            {plan && (
+          {/* Без видимої смуги прокрутки; на lg+ — дві колонки (тариф | форма), щоб вікно вміщалось за висотою */}
+          <div className="overflow-y-auto overscroll-contain px-5 pb-[max(1.5rem,env(safe-area-inset-bottom))] pt-7 [scrollbar-width:none] sm:px-8 sm:pb-8 sm:pt-8 lg:grid lg:grid-cols-[17rem_minmax(0,1fr)] lg:gap-10 lg:p-10 [&::-webkit-scrollbar]:hidden">
+            {plan ? (
               <>
-                <div className="pr-12">
+                <div>
+                <div className="pr-12 lg:pr-0">
                   <p className={`flex items-center gap-2 text-[0.875rem] font-medium ${muted}`}>
                     {formCopy.modal.label}
                     {plan.featured && <span className="rounded-full bg-black px-2.5 py-0.5 text-[0.75rem] text-white">{plansCopy.recommended}</span>}
@@ -115,13 +118,13 @@ export default function LeadModal({ plan, open, onClose }: { plan: Plan | null; 
                   <h2 id={titleId} className="mt-1 text-[length:var(--text-h3)]">{plan.name}</h2>
                   <p className={`mt-1 text-[0.9375rem] ${muted}`}>{plan.for}</p>
                 </div>
-                <div className="mt-4 rounded-[var(--radius-card-sm)] bg-surface p-4">
+                <div className="mt-4 rounded-[var(--radius-card-sm)] bg-surface p-4 max-md:py-3">
                   <p className="flex items-baseline gap-2">
                     <span className={muted}>{formCopy.modal.from}</span>
                     <span className="metric text-[1.75rem]"><T>{plan.price}</T></span>
                     <span className={muted}>{formCopy.modal.perMonth}</span>
                   </p>
-                  <ul className="mt-3 grid gap-2">
+                  <ul className="mt-3 grid gap-2 max-md:hidden">
                     {plan.features.slice(0, 3).map((f) => (
                       <li key={f} className="flex gap-2.5 text-[0.875rem]">
                         <span className="mt-0.5 grid size-4.5 shrink-0 place-items-center rounded-full bg-black text-white" aria-hidden="true"><Check className="size-2.5" /></span>
@@ -131,7 +134,18 @@ export default function LeadModal({ plan, open, onClose }: { plan: Plan | null; 
                   </ul>
                 </div>
                 <p id={descId} className={`mb-5 mt-4 text-[0.9375rem] ${muted}`}>{formCopy.modal.lead}</p>
+                </div>
                 <LeadForm key={`${plan.name}-${formKey}`} fixedPlan={plan.name} onClose={onClose} onSuccess={onSuccess} />
+              </>
+            ) : (
+              // Без тарифу — загальна заявка на консультацію (кнопка «Консультація» у шапці)
+              <>
+                <div className="pr-12 lg:pr-0">
+                  <Badge tone="success">{formCopy.badge}</Badge>
+                  <h2 id={titleId} className="mt-3 text-[length:var(--text-h3)]">{formCopy.header}</h2>
+                  <p id={descId} className={`mb-5 mt-3 text-[0.9375rem] ${muted}`}>{contact.lead}</p>
+                </div>
+                <LeadForm key={`consult-${formKey}`} fixedPlan="" onClose={onClose} onSuccess={onSuccess} />
               </>
             )}
           </div>
