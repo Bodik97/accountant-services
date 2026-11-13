@@ -2,7 +2,7 @@
 
 import { type KeyboardEvent, useActionState, useEffect, useId, useRef, useState, type ChangeEvent, type FormEvent } from "react";
 import { submitLead } from "@/app/actions/lead";
-import { contactMethods, formatPhone, nameError, phoneDigits, phoneError, NAME_MAX, type LeadState } from "@/lib/lead-schema";
+import { contactMethods, formatPhone, nameError, phoneDigits, phoneError, sanitizeNameInput, NAME_MAX, type LeadState } from "@/lib/lead-schema";
 import { brand, contact, formCopy as c } from "@/content/site";
 import Button from "@/components/ui/Button";
 import Badge from "@/components/ui/Badge";
@@ -97,7 +97,7 @@ export default function LeadForm({ fixedPlan, onClose, onSuccess }: { fixedPlan?
   }, [inModal]);
 
   const onName = (e: ChangeEvent<HTMLInputElement>) => {
-    setName(e.target.value);
+    setName(sanitizeNameInput(e.target.value));
     setEditedAfterSubmit((s) => ({ ...s, name: true }));
   };
 
@@ -185,7 +185,7 @@ export default function LeadForm({ fixedPlan, onClose, onSuccess }: { fixedPlan?
           <input
             id={id("name")} name="name" data-field="name" className={input}
             autoComplete="name" autoCapitalize="words" enterKeyHint="next" spellCheck={false}
-            maxLength={NAME_MAX + 10} required placeholder={c.name.placeholder}
+            maxLength={NAME_MAX} required placeholder={c.name.placeholder}
             value={name} onChange={onName} onBlur={() => setTouched((t) => ({ ...t, name: true }))}
             aria-invalid={!!errorOf("name")} aria-describedby={describedBy("name")}
           />

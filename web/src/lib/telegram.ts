@@ -13,7 +13,7 @@ export async function sendLead(lead: Lead): Promise<boolean> {
   const text = [
     "<b>Нова заявка з сайту</b>",
     `Ім'я: ${escape(lead.name)}`,
-    `Телефон: +${lead.phone.startsWith("380") ? lead.phone : "38" + lead.phone}`,
+    `Телефон: +${lead.phone}`,
     `Зв'язок: ${lead.method}`,
     lead.plan ? `Пакет: ${escape(lead.plan)}` : "",
   ]

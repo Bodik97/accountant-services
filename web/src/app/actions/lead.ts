@@ -38,6 +38,7 @@ export async function submitLead(_prev: LeadState, formData: FormData): Promise<
     return { status: "error", values, fieldErrors: { name: fieldErrors.name, phone: fieldErrors.phone } };
   }
   // Занадто швидка відправка (< 1 с від відкриття форми) — швидше за все бот. Людині показуємо помилку, а не фальшивий успіх.
+  // Час «з майбутнього» (підроблене поле ts) дає від'ємну різницю і теж відсікається.
   if (Date.now() - parsed.data.ts < 1000) return { status: "error", values, message: TOO_FAST };
 
   const h = await headers();

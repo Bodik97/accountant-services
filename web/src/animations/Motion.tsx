@@ -64,8 +64,24 @@ export default function Motion() {
     window.addEventListener("scene3d:ready", refresh);
     window.addEventListener("load", refresh);
 
+    // Пряме посилання з якорем (/#pricing): браузер стрибає до розділу ще до pin «Фінансів»,
+    // який потім зсуває сторінку. Після кожного перерахунку повертаємо якір на місце —
+    // доки людина сама не почала гортати (або 4 с).
+    const target = location.hash.length > 1 ? document.getElementById(decodeURIComponent(location.hash.slice(1))) : null;
+    const stopAnchor = () => {
+      ScrollTrigger.removeEventListener("refresh", toAnchor);
+      ["wheel", "touchstart", "keydown", "pointerdown"].forEach((t) => removeEventListener(t, stopAnchor));
+    };
+    const toAnchor = () => target?.scrollIntoView({ block: "start" });
+    if (target) {
+      ScrollTrigger.addEventListener("refresh", toAnchor);
+      ["wheel", "touchstart", "keydown", "pointerdown"].forEach((t) => addEventListener(t, stopAnchor, { once: true, passive: true }));
+      window.setTimeout(stopAnchor, 4000);
+    }
+
     cleanups.push(() => {
       alive = false;
+      stopAnchor();
       cancelAnimationFrame(raf);
       window.removeEventListener("scene3d:ready", refresh);
       window.removeEventListener("load", refresh);
