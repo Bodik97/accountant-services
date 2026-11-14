@@ -1,6 +1,6 @@
 import { hero } from "@/content/site";
 import { heroWidgets } from "@/content/demo";
-import Button from "@/components/ui/Button";
+import ConsultButton from "@/components/ConsultButton";
 import Scene3D from "@/components/three/Scene3D";
 import HeroBackdrop from "./HeroBackdrop";
 import TaxesPaid from "@/components/widgets/TaxesPaid";
@@ -46,7 +46,7 @@ export default function Hero() {
           </h1>
           <p className="mt-6 max-w-[42ch] [@media(max-height:31rem)]:mt-4 text-[length:var(--text-lead)] text-gray-light" data-hero>{hero.lead}</p>
           <div className="mt-10 flex flex-wrap [@media(max-height:31rem)]:mt-6 items-center justify-between gap-4" data-hero>
-            <Button href="#contact" surface="dark" arrow className="max-w-full whitespace-normal! py-1.5 text-left">{hero.cta}</Button>
+            <ConsultButton surface="dark" arrow className="max-w-full whitespace-normal! py-1.5 text-left">{hero.cta}</ConsultButton>
           </div>
         </div>
       </div>

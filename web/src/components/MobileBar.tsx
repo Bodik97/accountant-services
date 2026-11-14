@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { brand } from "@/content/site";
 import { ArrowRight } from "@/components/ui/icons";
 import { PhoneIcon, TelegramIcon, ViberIcon } from "@/components/ui/ContactIcons";
+import { OPEN_CONSULT } from "@/components/ConsultButton";
 
 // Кнопка зв'язку: іконка над коротким підписом
 const item = "flex min-h-12 min-w-[3.75rem] flex-col items-center justify-center gap-0.5 rounded-full px-2 text-[0.6875rem] font-medium leading-none text-white/90 transition-colors hover:bg-white/10";
@@ -56,12 +57,12 @@ export default function MobileBar() {
         <ViberIcon className="size-5" />
         Viber
       </a>
-      <a href="#contact" tabIndex={show ? 0 : -1} className="group flex min-h-12 items-center justify-center gap-2 rounded-full bg-white pl-4 pr-1.5 text-sm font-semibold text-black">
+      <button type="button" aria-haspopup="dialog" onClick={() => window.dispatchEvent(new Event(OPEN_CONSULT))} tabIndex={show ? 0 : -1} className="group flex min-h-12 items-center justify-center gap-2 rounded-full bg-white pl-4 pr-1.5 text-sm font-semibold text-black">
         Заявка
         <span aria-hidden="true" className="grid size-9 place-items-center rounded-full bg-black text-white transition-transform duration-200 group-hover:translate-x-0.5">
           <ArrowRight />
         </span>
-      </a>
+      </button>
     </div>
   );
 }

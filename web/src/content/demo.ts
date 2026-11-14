@@ -11,7 +11,6 @@ import type {
   QuarterTaxesProps,
   ReportsProgressProps,
   StatProps,
-  ToastProps,
 } from "@/components/widgets/types";
 import { about } from "./site";
 
@@ -40,9 +39,7 @@ export const heroWidgets = {
 // «Про мене»: реальні показники — НЕ демо, тому demo: false і значення-заглушки [ДАНІ]
 export const aboutWidgets = {
   clients: { value: about.stats[0].value, label: about.stats[0].label, avatars: 3, demo: false },
-  years: { value: about.stats[1].value, label: about.stats[1].label, demo: false },
-  toast: { title: "Звіт за жовтень надіслано", time: "сьогодні, 09:00" },
-} as const satisfies { clients: StatProps; years: StatProps; toast: ToastProps };
+} as const satisfies { clients: StatProps };
 
 // «Що я роблю»: ключі збігаються з ServiceWidgetKey у site.ts. Реалістичний приклад ФОП 3 групи, листопад 2026.
 // Ліміт 3 групи на 2026 рік = 1167 мінімальних зарплат × 8 647 ₴ = 10 091 049 ₴.

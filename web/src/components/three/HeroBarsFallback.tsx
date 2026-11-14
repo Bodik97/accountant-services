@@ -35,7 +35,14 @@ const FACES: { n: V3; v: number[]; kind: "top" | "front" | "side" }[] = [
 
 type Tone = Record<"top" | "front" | "side", string>;
 const DARK: Tone = { top: "#3a3a3a", front: "#141414", side: "#0a0a0a" };
-const LIGHT: Tone = { top: "#ffffff", front: "#ececec", side: "#d6d6d6" };
+const TONES: Record<"white" | "grey" | "black" | "red", Tone> = {
+  white: { top: "#ffffff", front: "#f2f2f2", side: "#dcdcdc" },
+  grey: { top: "#a8a8a8", front: "#8a8a8a", side: "#6e6e6e" },
+  black: DARK,
+  red: { top: "#f0574d", front: "#e0352b", side: "#b8261e" },
+};
+// Як barTone у HeroBars (тут без імпорту, щоб не тягнути three.js у lite-режим)
+const barTone = (i: number) => (i < 3 ? "red" : i < 6 ? "black" : i < 9 ? "grey" : "white");
 
 function box(cx: number, w: number, y0: number, h: number, d: number, tone: Tone) {
   const xs = [cx - w / 2, cx + w / 2];
@@ -53,7 +60,7 @@ function box(cx: number, w: number, y0: number, h: number, d: number, tone: Tone
 // Плита, потім стовпчики від дальнього (праворуч углибині) до ближнього
 const SHAPES = [
   ...box(0, PLATE.w, -PLATE.h, PLATE.h, PLATE.d, DARK),
-  ...HEIGHTS.map((h, i) => box(X[i], BAR, 0, h, BAR, i === 11 ? LIGHT : DARK)).reverse().flat(),
+  ...HEIGHTS.map((h, i) => box(X[i], BAR, 0, h, BAR, TONES[barTone(i)])).reverse().flat(),
 ];
 const TREND = HEIGHTS.map((h, i) => rotate([X[i], h + 0.12, 0]))
   .map(([x, y]) => `${x.toFixed(3)},${(-y).toFixed(3)}`)
@@ -81,7 +88,7 @@ export default function HeroBarsFallback() {
           <polygon key={i} points={s.points} fill={s.fill} stroke={s.fill} strokeWidth="0.008" strokeLinejoin="round" />
         ))}
         <polyline points={TREND} fill="none" stroke="#1a1a1a" strokeWidth="0.012" strokeLinejoin="round" strokeLinecap="round" />
-        <circle cx={DOT[0]} cy={-DOT[1]} r="0.045" fill="#0d0d0d" />
+        <circle cx={DOT[0]} cy={-DOT[1]} r="0.045" fill="#e0352b" />
       </svg>
     </div>
   );

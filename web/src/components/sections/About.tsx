@@ -4,12 +4,50 @@ import SectionHead from "@/components/ui/SectionHead";
 import Card from "@/components/ui/Card";
 import { AboutScene } from "./SceneSlots";
 import Stat from "@/components/widgets/Stat";
-import Toast from "@/components/widgets/Toast";
 import { aboutIcons } from "./aboutIcons";
 
 const factIcons = [aboutIcons.person, aboutIcons.globe, aboutIcons.contract];
 
-/** «Про мене»: текст і факти ліворуч, праворуч 3D-стос пластин із картками досвіду. */
+/** Печатка досвіду: велике «20+» у центрі, по колу повільно обертається напис — як на гербовому знаку. */
+function Seal() {
+  const { unit, ring } = about.seal;
+  const value = about.stats[1].value;
+  const num = Number.parseInt(value, 10) || 0;
+  const suffix = value.replace(String(num), "");
+  const words = [...ring, ...ring];
+  return (
+    <div className="relative grid size-[12rem] place-items-center rounded-full bg-[radial-gradient(circle_at_30%_25%,#2e2e2e,#0a0a0a_70%)] text-white shadow-[var(--shadow-float)] sm:size-[15rem]" data-seal>
+      <svg viewBox="0 0 200 200" aria-hidden="true" className="absolute inset-0 size-full motion-safe:animate-[seal-spin_48s_linear_infinite]">
+        <defs>
+          <path id="seal-ring" d="M100,100 m-80,0 a80,80 0 1,1 160,0 a80,80 0 1,1 -160,0" />
+        </defs>
+        <circle cx="100" cy="100" r="97" fill="none" stroke="rgb(255 255 255/0.18)" strokeWidth="0.75" />
+        <circle cx="100" cy="100" r="93" fill="none" stroke="rgb(255 255 255/0.08)" strokeWidth="0.75" />
+        <circle cx="100" cy="100" r="66" fill="none" stroke="rgb(255 255 255/0.22)" strokeWidth="0.75" />
+        <text fontSize="10.5" fontWeight="500" letterSpacing="2.4" fill="rgb(255 255 255/0.78)" style={{ textTransform: "uppercase" }}>
+          <textPath href="#seal-ring" textLength="500" lengthAdjust="spacing">
+            {words.map((w, i) => (
+              <tspan key={i}>
+                {w}
+                <tspan fill="var(--color-success)">{"  •  "}</tspan>
+              </tspan>
+            ))}
+          </textPath>
+        </text>
+      </svg>
+      <p className="relative text-center">
+        <span className="metric block text-[3.125rem] leading-none tracking-[-0.03em] sm:text-[4rem]">
+          <span data-count={num}>{num}</span>{suffix}
+        </span>
+        <span className="mt-1 block text-[0.75rem] uppercase tracking-[0.22em] text-gray-mid">{unit}</span>
+      </p>
+      {/* Для читачів екрана — без обертового тексту */}
+      <span className="sr-only">{value} {about.stats[1].label}</span>
+    </div>
+  );
+}
+
+/** «Про мене»: текст і факти ліворуч, праворуч 3D-стос пластин, 50+ клієнтів і печатка «20+ років досвіду». */
 export default function About() {
   const w = aboutWidgets;
   return (
@@ -58,8 +96,7 @@ export default function About() {
         <Card variant="light" radius="lg" className="relative min-h-[30rem] overflow-hidden lg:sticky lg:top-24 lg:h-[calc(100svh-7.5rem)] lg:max-h-[52rem] lg:min-h-[34rem]" data-about-scene>
           <AboutScene className="absolute inset-0" />
           <div className="absolute left-4 top-4 sm:left-6 sm:top-6" data-depth="0.4"><Stat {...w.clients} variant="white" /></div>
-          <div className="absolute bottom-4 right-4 sm:bottom-6 sm:right-6" data-depth="0.7"><Stat {...w.years} variant="dark" /></div>
-          <div className="absolute bottom-24 left-4 hidden sm:block lg:bottom-28 lg:left-6" data-depth="0.55"><Toast {...w.toast} /></div>
+          <div className="absolute bottom-4 right-4 sm:bottom-6 sm:right-6" data-depth="0.6"><Seal /></div>
         </Card>
       </div>
     </section>

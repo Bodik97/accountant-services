@@ -11,7 +11,7 @@ import type { Quality } from "./types";
 
 /**
  * «Скульптура-графік»: 12 стовпчиків (місяці року) на тонкій плиті.
- * Матовий чорний пластик, останній стовпчик — світлий (поточний місяць).
+ * Матовий пластик чотирьох тонів від нижчих до вищих: місяці 1–3 червоні, 4–6 чорні, 7–9 сірі, 10–12 білі; точка тренду червона.
  * Інтро: стовпчики виростають з 0 по черзі; далі — повільне погойдування ±12° і легкий parallax.
  */
 
@@ -26,6 +26,8 @@ const X = HEIGHTS.map((_, i) => (i - 5.5) * PITCH);
 const LINE_LIFT = 0.12; // лінія тренду трохи над вершинами
 const TREND: [number, number, number][] = HEIGHTS.map((h, i) => [X[i], h + LINE_LIFT, 0]);
 const LAST = TREND[11];
+/** Тон стовпчика за місяцем (той самий розподіл продубльовано в HeroBarsFallback). */
+const barTone = (i: number) => (i < 3 ? "red" : i < 6 ? "black" : i < 9 ? "grey" : "white");
 
 // Габарит з урахуванням нахилу і погойдування (для вписування в полотно)
 const FIT = { w: 3.6, h: 2.8 };
@@ -56,7 +58,13 @@ function makeResources(quality: Quality) {
   });
   return {
     dark: new MeshPhysicalMaterial({ color: "#0d0d0d", ...finish }),
-    light: new MeshPhysicalMaterial({ color: "#f2f2f2", ...finish }),
+    // Студійне світло темнить світлі тони — підсвічуємо їх власним світінням, щоб білий лишався білим, а червоний — яскравим
+    tones: {
+      white: new MeshPhysicalMaterial({ color: "#ffffff", emissive: "#ffffff", emissiveIntensity: 0.55, ...finish }),
+      grey: new MeshPhysicalMaterial({ color: "#9a9a9a", emissive: "#8a8a8a", emissiveIntensity: 0.35, ...finish }),
+      black: new MeshPhysicalMaterial({ color: "#0d0d0d", ...finish }),
+      red: new MeshPhysicalMaterial({ color: "#ff3b30", emissive: "#e0352b", emissiveIntensity: 0.45, ...finish }),
+    },
     bars,
     plate: new RoundedBoxGeometry(PLATE.w, PLATE.h, PLATE.d, segments, 0.03),
     dot: new SphereGeometry(0.045, quality === "low" ? 16 : 32, quality === "low" ? 12 : 24),
@@ -76,7 +84,7 @@ function Sculpture({ quality }: { quality: Quality }) {
   useEffect(
     () => () => {
       res.dark.dispose();
-      res.light.dispose();
+      Object.values(res.tones).forEach((m) => m.dispose());
       res.plate.dispose();
       res.dot.dispose();
       res.bars.forEach((g) => g.dispose());
@@ -132,11 +140,11 @@ function Sculpture({ quality }: { quality: Quality }) {
                 position-x={X[i]}
                 scale-y={0.001}
               >
-                <mesh geometry={g} material={i === 11 ? res.light : res.dark} />
+                <mesh geometry={g} material={res.tones[barTone(i)]} />
               </group>
             ))}
             <Line ref={line} points={TREND} color="#1a1a1a" lineWidth={high ? 1.4 : 1.2} transparent opacity={0} />
-            <mesh ref={dot} geometry={res.dot} material={res.dark} position={LAST} scale={0.001} />
+            <mesh ref={dot} geometry={res.dot} material={res.tones.red} position={LAST} scale={0.001} />
             {/* Тінь знімається один раз і обертається разом з плитою — повторний рендер не потрібен */}
             <ContactShadows
               position-y={-PLATE.h - 0.002}

@@ -344,6 +344,19 @@ export function setupScroll({ pinFinances, parallaxFactor }: { pinFinances: bool
     cleanups.push(() => { aboutProgress.current = 0; });
   }
 
+  // 6b. Печатка досвіду: «проявляється» з поворотом, число рахує від 0 — один раз при появі
+  const seal = document.querySelector<HTMLElement>("[data-seal]");
+  const num = seal?.querySelector<HTMLElement>("[data-count]");
+  if (seal && num) {
+    const end = Number(num.dataset.count) || 0;
+    const shown = num.textContent;
+    const counter = { v: 0 };
+    const tl = gsap.timeline({ scrollTrigger: { trigger: seal, start: "top 85%", once: true } });
+    tl.from(seal, { scale: 0.7, rotate: -40, autoAlpha: 0, duration: 1.2, ease: EXPO }, 0);
+    if (end) tl.to(counter, { v: end, duration: 2, ease: OUT, onUpdate: () => { num.textContent = String(Math.round(counter.v)); } }, 0.15);
+    cleanups.push(() => { tl.scrollTrigger?.kill(); tl.kill(); num.textContent = shown; gsap.set(seal, { clearProps: "transform,opacity,visibility" }); });
+  }
+
   // 7. «Фінанси» без pin: екран телефона гортається разом із прокруткою секції.
   // Лише ≥1024 (сенсорні/низькі екрани); на телефоні/планшеті телефон прихований (offsetParent = null) — там картки.
   const phone = finances?.querySelector<HTMLElement>("[data-phone-scroll]");

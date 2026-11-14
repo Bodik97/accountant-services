@@ -160,6 +160,7 @@ html.lenis, html.lenis body { height: auto; }
 /* Елементи вступу hero ховаються, доки GSAP їх не підготує (без «блимання»); запасний показ через 2.5 с */
 .motion:not(.motion-ready) :is(#hero [data-widget], #hero [data-progress-nav]) { visibility: hidden; animation: split-fallback 0s 2.5s forwards; }
 @keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes seal-spin { to { transform: rotate(360deg); } }
 @keyframes g-mark { from { background-size: 0% 100%; } to { background-size: 100% 100%; } }
 @keyframes g-bubble { from { opacity: 0; transform: translateY(10px) scale(.97); } to { opacity: 1; transform: none; } }
 

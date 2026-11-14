@@ -8,6 +8,7 @@ import { ArrowRight } from "@/components/ui/icons";
 import { PhoneIcon, TelegramIcon, ViberIcon } from "@/components/ui/ContactIcons";
 import Logo from "@/components/ui/Logo";
 import LeadModal from "@/components/LeadModal";
+import { OPEN_CONSULT } from "@/components/ConsultButton";
 
 /**
  * Шапка — завжди закріплена зверху (не ховається при прокрутці).
@@ -17,6 +18,12 @@ import LeadModal from "@/components/LeadModal";
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [consult, setConsult] = useState(false);
+  // Інші кнопки сторінки (напр. у hero) відкривають це саме вікно через подію
+  useEffect(() => {
+    const open = () => setConsult(true);
+    window.addEventListener(OPEN_CONSULT, open);
+    return () => window.removeEventListener(OPEN_CONSULT, open);
+  }, []);
   const [scrolled, setScrolled] = useState(false);
   const [active, setActive] = useState("");
   const burger = useRef<HTMLButtonElement>(null);
