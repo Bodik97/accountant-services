@@ -2,6 +2,9 @@ import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { ImageResponse } from "next/og";
 import { brand, hero } from "@/content/site";
+import { LOGO_PATH, LOGO_VIEWBOX } from "@/components/ui/Logo";
+
+const logo = `data:image/svg+xml;base64,${Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="${LOGO_VIEWBOX}"><path fill="#fff" d="${LOGO_PATH}"/></svg>`).toString("base64")}`;
 
 // Превʼю посилання в Telegram, Viber, Facebook, LinkedIn і Google (1200×630). Генерується під час збірки.
 export const alt = `${brand.name} — ${brand.tagline}`;
@@ -13,7 +16,7 @@ export default async function OpengraphImage() {
   return new ImageResponse(
     (
       <div style={{ width: "100%", height: "100%", display: "flex", flexDirection: "column", justifyContent: "space-between", padding: 80, background: "#0A0A0A", color: "#fff", fontFamily: "Wix" }}>
-        <div style={{ fontSize: 36, letterSpacing: -0.5 }}>{brand.name}</div>
+        <img src={logo} width={159} height={50} alt={brand.name} />
         <div style={{ display: "flex", flexDirection: "column" }}>
           {hero.titleLines.map((line) => (
             <div key={line} style={{ fontSize: 88, lineHeight: 1.05, letterSpacing: -2 }}>{line}</div>

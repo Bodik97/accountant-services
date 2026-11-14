@@ -4,6 +4,7 @@ import Button from "@/components/ui/Button";
 import T from "@/components/ui/T";
 import { ArrowRight } from "@/components/ui/icons";
 import { PhoneIcon, TelegramIcon, ViberIcon } from "@/components/ui/ContactIcons";
+import Logo from "@/components/ui/Logo";
 
 const line = { viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: 1.75, strokeLinecap: "round", strokeLinejoin: "round", "aria-hidden": true } as const;
 const MailIcon = ({ className = "" }: { className?: string }) => (
@@ -31,7 +32,7 @@ export default function Footer() {
         {/* Бренд + заклик */}
         <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-xl">
-            <a href="#top" className="inline-flex min-h-11 items-center font-display text-[2.5rem] font-bold leading-none tracking-[-0.04em] lg:text-[3.5rem]">{brand.name}</a>
+            <a href="#top" aria-label={brand.name} className="inline-flex min-h-11 items-center"><Logo className="h-10 lg:h-14" /></a>
             <p className="mt-4 text-gray-light">{brand.tagline}.</p>
             <p className="mt-2 max-w-[48ch] text-[0.9375rem] text-gray-mid">{footer.lead}</p>
           </div>

@@ -6,6 +6,7 @@ import Button from "@/components/ui/Button";
 import T from "@/components/ui/T";
 import { ArrowRight } from "@/components/ui/icons";
 import { PhoneIcon, TelegramIcon, ViberIcon } from "@/components/ui/ContactIcons";
+import Logo from "@/components/ui/Logo";
 import LeadModal from "@/components/LeadModal";
 
 /**
@@ -89,9 +90,10 @@ export default function Header() {
           <a
             href="#top"
             onClick={() => setOpen(false)}
-            className={`flex min-h-11 items-center font-display text-[1.375rem] font-bold tracking-[-0.04em] transition-colors duration-300 ${solid ? "text-black" : "text-white"}`}
+            aria-label={brand.name}
+            className={`flex min-h-11 items-center transition-colors duration-300 ${solid ? "text-black" : "text-white"}`}
           >
-            {brand.name}
+            <Logo className="h-[1.375rem] lg:h-6" />
           </a>
           <div className="flex items-center gap-2 lg:hidden">
             <a
