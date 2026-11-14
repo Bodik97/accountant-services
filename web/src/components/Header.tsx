@@ -93,7 +93,7 @@ export default function Header() {
             aria-label={brand.name}
             className={`flex min-h-11 items-center transition-colors duration-300 ${solid ? "text-black" : "text-white"}`}
           >
-            <Logo className="h-[1.375rem] lg:h-6" />
+            <Logo className="h-9 lg:h-10" />
           </a>
           <div className="flex items-center gap-2 lg:hidden">
             <a

@@ -32,7 +32,7 @@ export default function Footer() {
         {/* Бренд + заклик */}
         <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-xl">
-            <a href="#top" aria-label={brand.name} className="inline-flex min-h-11 items-center"><Logo className="h-10 lg:h-14" /></a>
+            <a href="#top" aria-label={brand.name} className="inline-flex min-h-11 items-center"><Logo className="h-16 lg:h-24" /></a>
             <p className="mt-4 text-gray-light">{brand.tagline}.</p>
             <p className="mt-2 max-w-[48ch] text-[0.9375rem] text-gray-mid">{footer.lead}</p>
           </div>
