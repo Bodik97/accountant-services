@@ -135,15 +135,8 @@ export default function Header() {
               </a>
             ))}
           </nav>
-          {/* Відкриває вікно заявки; без JS — звичайне посилання на форму внизу сторінки */}
-          <Button
-            href="#contact"
-            size="sm"
-            onClick={(e) => {
-              e.preventDefault();
-              setConsult(true);
-            }}
-          >
+          {/* Відкриває вікно заявки. Саме <button>, а не посилання #contact: Lenis (anchors) сам прокручує до якоря, ігноруючи preventDefault */}
+          <Button size="sm" aria-haspopup="dialog" onClick={() => setConsult(true)}>
             Консультація
           </Button>
         </div>
